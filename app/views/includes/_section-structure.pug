@@ -1,0 +1,7 @@
+mixin section-container(title, hasMore)
+  section.py-5
+    header.flex.justify-between.items-center
+      h2.font-bold= title
+      if hasMore
+        a(href="#") All (2)
+    block

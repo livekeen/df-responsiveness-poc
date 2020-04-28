@@ -1,0 +1,8 @@
+mixin card-container(title, hasSettings)
+  article
+    header.flex.justify-between.items-center.mb-2
+      h2.text-lg.text-gray-600= title
+      if hasSettings
+        button.w-5.h-5.bg-gray-400.rounded-full
+    section.rounded.shadow-md.px-4.divide-y.divide-gray-400.mb-4
+      block

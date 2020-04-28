@@ -4,6 +4,91 @@ block title
   title Website Home
 
 block body
-  header.p-10
-    h1.text-4xl Hello World
-    h2.text-2xl Success is not final, failure is not fatal: it is the courage to continue that counts.
+  include ../includes/_card-structure.pug
+  include ../includes/_section-structure.pug
+
+  section.col-span-10.p-5
+    header
+      h1.mb-4.text-2xl Overview
+      main.grid.grid-flow-col-dense.grid-cols-3.gap-4
+        .general
+          +card-container("Personal Info", true)
+            +section-container("Contact Information", true)
+              h3 Addresses
+              div.mb-2
+                h4 Primary Residence
+                ul
+                  li 123 Street
+                  li Coldwater, AK
+                  li 34567
+                  li United States of America
+              div.mb-2
+                h3 Contact Information
+                h4 Phone Numbers
+                ul
+                  li Home
+                  li Business
+                h4 Email Addresses
+                ul
+                  li Home
+                  li Business
+            +section-container("Personal Information")
+              h4 Marital Status
+              h4 Dependents
+          +card-container("About", true)
+            +section-container("Summary", false)
+              p Assist with the analysis
+            +section-container("Work Assignments", true)
+              div.mb-2
+                h3 Marketing Specialist
+                p North American Marketing
+                p 2/15/2018 &endash; Current ° 1 year 2 months
+              div.mb-2
+                h4 Job Description
+                ul
+                  li Developing
+                  li Developing
+              div.mb-2
+                h4 Key Projects
+                p Compensation module
+        .career
+          +card-container("Performance", true)
+            +section-container("Timeline", false)
+              div chart here
+            +section-container("Reviews", true)
+              div Annual Review 2019
+              | Due Date
+              | Chart
+              | Chart Value
+            +section-container("Goals", true)
+              div Annual Review 2019
+              | Due Date
+              | Chart
+              | Chart Value
+            +section-container("Competencies", true)
+              div Annual Review 2019
+              | Due Date
+              | Chart
+              | Chart Value
+            +section-container("Development Plans", true)
+              div Annual Review 2019
+              | Due Date
+              | Chart
+              | Chart Value
+          +card-container("Career", true)
+            +section-container("Job Preferences", false)
+        .insights
+          +card-container("Insights", false)
+            +section-container("Highlights", false)
+              div Strengths
+              div Last Promotion
+              div Highest Experience
+            +section-container("Recent Activity", true)
+              div Fall Brand Strategy
+              div Last Promotion
+              div Highest Experience
+            +section-container("Recommendations", true)
+              div Strengths
+              div Last Promotion
+              div Highest Experience
+
