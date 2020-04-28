@@ -1,0 +1,12 @@
+mixin performance-metric(title, flag, secondaryLabel, secondaryDate, metric, value)
+  div.py-2
+    header.flex.justify-between.items-center
+      if flag === true
+        div blue flag
+      else
+        div grey flag
+      h2.font-bold.text-lg= title
+      h3 secondary
+      if hasMore
+        a(href="#") All (2)
+    block

@@ -7,6 +7,8 @@ block body
   include ../includes/_navigation.pug
   include ../includes/_card-structure.pug
   include ../includes/_section-structure.pug
+  include ../includes/_performance-structure.pug
+  include ../includes/_insights-structure.pug
 
   +navigation('Overview')
 
@@ -17,81 +19,78 @@ block body
         .general
           +card-container("Personal Info", true)
             +section-container("Contact Information", true)
-              h3 Addresses
-              div.mb-2
-                h4 Primary Residence
-                ul
-                  li 123 Street
-                  li Coldwater, AK
-                  li 34567
-                  li United States of America
-              div.mb-2
-                h3 Contact Information
-                h4 Phone Numbers
-                ul
-                  li Home
-                  li Business
-                h4 Email Addresses
-                ul
-                  li Home
-                  li Business
+              div
+                h3.text-base.mb-1 Addresses
+                div.mb-4
+                  h4.text-gray-600 Primary Residence
+                  ul
+                    li 123 Street
+                    li Coldwater, AK
+                    li 34567
+                    li United States of America
+              div
+                h3.text-base.mb-1 Contact Information
+                div.mb-4
+                  h4.text-gray-600 Phone Numbers
+                  ul
+                    li Home
+                    li Business
+                div.mb-4
+                  h4.text-gray-600 Email Addresses
+                  ul
+                    li Home
+                    li Business
             +section-container("Personal Information")
-              h4 Marital Status
-              h4 Dependents
+              div.mb-4
+                h4.text-gray-600 Marital Status
+                p Not specified
+              div.mb-4
+                h4.text-gray-600 Dependents
+                ul
+                  li Maya Short
+                  li Roberto Short
           +card-container("About", true)
             +section-container("Summary", false)
               p Assist with the analysis
             +section-container("Work Assignments", true)
-              div.mb-2
-                h3 Marketing Specialist
+              div.mb-4
+                h3.text-base.mb-1 Marketing Specialist
                 p North American Marketing
                 p 2/15/2018 &endash; Current ° 1 year 2 months
-              div.mb-2
-                h4 Job Description
+              div.mb-4
+                h4.text-gray-600 Job Description
                 ul
                   li Developing
                   li Developing
-              div.mb-2
-                h4 Key Projects
+              div.mb-4
+                h4.text-gray-600 Key Projects
                 p Compensation module
         .career
           +card-container("Performance", true)
             +section-container("Timeline", false)
               div.h-24.bg-gray-400 chart here
             +section-container("Reviews", true)
-              div Annual Review 2019
-              | Due Date
-              | Chart
-              | Chart Value
+              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
             +section-container("Goals", true)
-              div Annual Review 2019
-              | Due Date
-              | Chart
-              | Chart Value
+              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
             +section-container("Competencies", true)
-              div Annual Review 2019
-              | Due Date
-              | Chart
-              | Chart Value
+              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
             +section-container("Development Plans", true)
-              div Annual Review 2019
-              | Due Date
-              | Chart
-              | Chart Value
+              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
           +card-container("Career", true)
             +section-container("Job Preferences", false)
-              div.mb-2
-                h4 Interests
+              div.mb-4
+                h4.text-gray-600 Interests
                 p Strategy Development
-              div.mb-2
-                h4 Mobility
+              div.mb-4
+                h4.text-gray-600 Mobility
                 p Strategy Development
-              div.mb-2
-                h4 Job Family
+              div.mb-4
+                h4.text-gray-600 Job Family
                 p Marketing; Sales
 
-              div.mb-2
-                h4 Availability
+              div.mb-4
+                h4.text-gray-600 Availability
                 p Monday – Thursday
                 p 9:00am - 8:30pm
                 p Saturday
@@ -100,9 +99,9 @@ block body
         .insights
           +card-container("Insights", false)
             +section-container("Highlights", false)
-              div Strengths
-              div Last Promotion
-              div Highest Experience
+              +insights-metric('Strengths', 'Communication and Organization', 'icon here')
+              +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'icon here')
+              +insights-metric('Highest Experience', 'Marketing Specialist • 1 year and 2 months', 'icon here')
             +section-container("Recent Activity", true)
               div Fall Brand Strategy
               div Last Promotion
