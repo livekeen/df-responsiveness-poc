@@ -7,6 +7,7 @@ const
   browserSync   = require('browser-sync').create(),
   concat        = require('gulp-concat'),
   del           = require('del'),
+  githubPages   = require('gulp-gh-pages'),
   imagemin      = require('gulp-imagemin'),
   jshint        = require('gulp-jshint'),
   cleancss      = require('gulp-clean-css'),
@@ -113,6 +114,13 @@ function reload(done) {
   done();
 }
 
+// Deploy to Github Pages
+// Make sure to create a branch called 'gh-pages' before deploying
+function deployFiles() {
+  return src(basePaths.dest + "**/*")
+    .pipe(githubPages())
+}
+
 // Pages
 function pages() {
   return src(paths.pages.src)
@@ -169,11 +177,13 @@ function fonts() {
 // Defining complex tasks
 const build = gulp.series(clean, parallel(styles, images, pages, scripts, fonts), cleanEmptyFolders);
 const serve = gulp.series(build, watchFiles, connect);
+const deploy = gulp.series(build, deployFiles);
 
 // Tasks
-exports.build = build;
-exports.clean = clean;
-exports.pages = pages;
-exports.serve = serve;
+exports.build   = build;
+exports.clean   = clean;
+exports.pages   = pages;
+exports.serve   = serve;
+exports.deploy  = deploy;
 
 exports.default = build;
