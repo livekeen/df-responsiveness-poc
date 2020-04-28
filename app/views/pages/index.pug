@@ -4,12 +4,6 @@ block title
   title Website Home
 
 block body
-  include ../includes/_navigation.pug
-  include ../includes/_card-structure.pug
-  include ../includes/_section-structure.pug
-  include ../includes/_performance-structure.pug
-  include ../includes/_insights-structure.pug
-
   +navigation('Overview')
 
   section.col-span-10.py-4
@@ -20,32 +14,32 @@ block body
           +card-container("Personal Info", true)
             +section-container("Contact Information", true)
               div
-                h3.text-base.mb-1 Addresses
+                +h3("Addresses")
                 div.mb-4
-                  h4.text-gray-600 Primary Residence
+                  +h4("Primary Residence", "text-gray-600")
                   ul
                     li 123 Street
                     li Coldwater, AK
                     li 34567
                     li United States of America
               div
-                h3.text-base.mb-1 Contact Information
+                +h3("Contact Information")
                 div.mb-4
-                  h4.text-gray-600 Phone Numbers
+                  +h4("Phone Numbers", "text-gray-600")
                   ul
                     li Home
                     li Business
                 div.mb-4
-                  h4.text-gray-600 Email Addresses
+                  +h4("Email Addresses", "text-gray-600")
                   ul
                     li Home
                     li Business
             +section-container("Personal Information")
               div.mb-4
-                h4.text-gray-600 Marital Status
+                +h4("Marital Status", "text-gray-600")
                 p Not specified
               div.mb-4
-                h4.text-gray-600 Dependents
+                +h4("Dependents", "text-gray-600")
                 ul
                   li Maya Short
                   li Roberto Short
@@ -54,16 +48,16 @@ block body
               p Assist with the analysis
             +section-container("Work Assignments", true)
               div.mb-4
-                h3.text-base.mb-1 Marketing Specialist
+                +h3("Marketing Specialist")
                 p North American Marketing
                 p 2/15/2018 &endash; Current ° 1 year 2 months
               div.mb-4
-                h4.text-gray-600 Job Description
+                +h4("Job Description", "text-gray-600")
                 ul
                   li Developing
                   li Developing
               div.mb-4
-                h4.text-gray-600 Key Projects
+                +h4("Key Projects", "text-gray-600")
                 p Compensation module
         .career
           +card-container("Performance", true)
@@ -80,17 +74,17 @@ block body
           +card-container("Career", true)
             +section-container("Job Preferences", false)
               div.mb-4
-                h4.text-gray-600 Interests
+                +h4("Interests", "text-gray-600")
                 p Strategy Development
               div.mb-4
-                h4.text-gray-600 Mobility
+                +h4("Mobility", "text-gray-600")
                 p Strategy Development
               div.mb-4
-                h4.text-gray-600 Job Family
+                +h4("Job Family", "text-gray-600")
                 p Marketing; Sales
 
               div.mb-4
-                h4.text-gray-600 Availability
+                +h4("Availability", "text-gray-600")
                 p Monday – Thursday
                 p 9:00am - 8:30pm
                 p Saturday

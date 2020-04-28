@@ -1,7 +1,7 @@
 - const links = [ 'Overview', 'About', 'Performance', 'Career', 'Personal Info', 'Forms', 'Preferences', 'Security', 'Notifications', 'Apps']
 
 mixin navigation(currentPage)
-  aside.h-full.col-span-2.bg-gray-100.border-r.sticky
+  nav.h-full.col-span-2.bg-gray-100.border-r.sticky
     ul.py-4
       each link in links
         if link === currentPage
@@ -9,4 +9,4 @@ mixin navigation(currentPage)
             a(class='py-1 px-4 block bg-gray-200 text-black-600 font-bold' href='./')= link
         else
           li
-            a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href='//google.com')= link
+            a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href='./')= link
