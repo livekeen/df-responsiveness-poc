@@ -29,20 +29,15 @@ html(lang='en')
       div.text-white.text-sm Profile &amp; Settings
       div Logout
     header.profile-header.bg-blue-400.p-4
-      h2 Aaron Glover
-      p Marketing Specialist
-      p North American Marketing
-      p +1(657)-123-4323
-      p aarong@asia.com
-
-    include ../includes/_navigation.pug
+      div.w-20.h-20.bg-white.inline-block.rounded-full
+      div.inline-block
+        h2 Aaron Glover
+        p Marketing Specialist
+        p North American Marketing
+        p +1(657)-123-4323
+        p aarong@asia.com
 
     div.grid.grid-cols-12.gap-4
-      aside.h-full.col-span-2.bg-gray-100.border-r.sticky
-        ul.py-4
-          each link in navigation
-            li
-              a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href='//google.com')= link
       block body
 
   script(src="function.js")

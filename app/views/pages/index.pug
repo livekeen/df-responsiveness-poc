@@ -4,10 +4,13 @@ block title
   title Website Home
 
 block body
+  include ../includes/_navigation.pug
   include ../includes/_card-structure.pug
   include ../includes/_section-structure.pug
 
-  section.col-span-10.p-5
+  +navigation('Overview')
+
+  section.col-span-10.py-4
     header
       h1.mb-4.text-2xl Overview
       main.grid.grid-flow-col-dense.grid-cols-3.gap-4
@@ -54,7 +57,7 @@ block body
         .career
           +card-container("Performance", true)
             +section-container("Timeline", false)
-              div chart here
+              div.h-24.bg-gray-400 chart here
             +section-container("Reviews", true)
               div Annual Review 2019
               | Due Date
@@ -77,6 +80,23 @@ block body
               | Chart Value
           +card-container("Career", true)
             +section-container("Job Preferences", false)
+              div.mb-2
+                h4 Interests
+                p Strategy Development
+              div.mb-2
+                h4 Mobility
+                p Strategy Development
+              div.mb-2
+                h4 Job Family
+                p Marketing; Sales
+
+              div.mb-2
+                h4 Availability
+                p Monday – Thursday
+                p 9:00am - 8:30pm
+                p Saturday
+                p 9:00am - 8:30pm
+
         .insights
           +card-container("Insights", false)
             +section-container("Highlights", false)
