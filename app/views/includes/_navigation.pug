@@ -1,6 +1,7 @@
 - const links = [ 'Overview', 'About', 'Performance', 'Career', 'Personal Info', 'Forms', 'Preferences', 'Security', 'Notifications', 'Apps']
 
 mixin navigation(currentPage)
+  //- span Insert invisible tab that hides on medium screen sizes and up
   nav.h-full.col-span-2.bg-gray-100.border-r.sticky
     ul.py-4
       each link in links
