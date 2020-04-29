@@ -1,13 +1,55 @@
-- const links = [ 'Overview', 'About', 'Performance', 'Career', 'Personal Info', 'Forms', 'Preferences', 'Security', 'Notifications', 'Apps']
+-
+  const links = [
+    {
+      name: 'Overview',
+      url: './'
+    },
+    {
+      name: 'About',
+      url: '/about.html'
+    },
+    {
+      name: 'Performance',
+      url: '#'
+    },
+    {
+      name: 'Career',
+      url: '#'
+    },
+    {
+      name: 'Personal Info',
+      url: '#'
+    },
+    {
+      name: 'Forms',
+      url: '#'
+    },
+    {
+      name: 'Preferences',
+      url: '#'
+    },
+    {
+      name: 'Security',
+      url: '#'
+    },
+    {
+      name: 'Notifications',
+      url: '#'
+    },
+    {
+      name: 'Apps',
+      url: '#'
+    },
+  ]
 
 mixin navigation(currentPage)
   //- span Insert invisible tab that hides on medium screen sizes and up
   nav(class="module__nav hidden md:block h-full bg-gray-100 border-r sticky")
     ul.py-4
       each link in links
-        if link === currentPage
+        if link.name === currentPage
           li
-            a(class='py-1 px-4 block bg-gray-200 text-black-600 font-bold' href='./')= link
+            a(class='py-1 px-4 block bg-gray-200 text-black-600 font-bold' href=link.url)= link.name
         else
           li
-            a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href='./')= link
+            a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href=link.url)= link.name
