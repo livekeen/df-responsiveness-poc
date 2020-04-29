@@ -94,7 +94,7 @@ function watchFiles(done) {
   watch(paths.pages.watch, series(pages, reload));
   watch(paths.styles.src, styles);
   watch(paths.scripts.src, scripts);
-  watch(paths.images.src, reload);
+  watch(paths.images.src, images);
   done();
 }
 
