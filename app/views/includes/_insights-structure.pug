@@ -12,7 +12,7 @@ mixin insights-metric(title, secondaryLabel, icon, percentageNumber)
       if percentageNumber
         div
           if percentageNumber > 75
-            span.flex.items-center.justify-center.border-2.rounded-full.w-8.h-8.border-green-500.text-green-500 #{percentageNumber}%
+            span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-green-500.text-green-500 #{percentageNumber}%
           else if percentageNumber > 50
-            span.flex.items-center.justify-center.border-2.rounded-full.w-8.h-8.border-orange-500.text-orange-500 #{percentageNumber}%
+            span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-orange-500.text-orange-500 #{percentageNumber}%
     block

@@ -23,7 +23,7 @@ html(lang='en')
     //- Stylesheet
     link(rel="stylesheet" href="styles.css")
 
-  body.text-xs
+  body.text-sm
 
     include ../includes/_navigation.pug
     include ../includes/_heading-structure.pug
@@ -36,16 +36,17 @@ html(lang='en')
       div Navigation
       div.text-white.text-sm Profile &amp; Settings
       div Logout
-    header.profile-header.bg-blue-400.p-4
-      div.w-20.h-20.bg-white.inline-block.rounded-full
-      div.inline-block
-        h2 Aaron Glover
-        p Marketing Specialist
-        p North American Marketing
-        p +1(657)-123-4323
-        p aarong@asia.com
+    div.module
+      header.module__header.bg-blue-400.p-4
+        div.w-20.h-20.bg-white.inline-block.rounded-full
+        div.inline-block
+          h2 Aaron Glover
+          p Marketing Specialist
+          p North American Marketing
+          p +1(657)-123-4323
+          p aarong@asia.com
 
-    div.grid.grid-cols-12
-      block body
+      div.module__wrapper.grid.grid-cols-12
+        block body
 
   script(src="function.js")

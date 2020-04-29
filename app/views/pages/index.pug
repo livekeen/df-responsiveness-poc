@@ -6,10 +6,10 @@ block title
 block body
   +navigation('Overview')
 
-  section.col-span-10.p-4
+  main(class="module__content p-4")
     header
       h1.mb-4.text-2xl Overview
-      main(class="md:grid md:gap-4 lg:grid-cols-2 xl:grid-cols-3")
+      section(class="sm:grid sm:gap-4 sm:grid-cols-2 xl:grid-cols-3")
         .general
           +card-container("Personal Info", true)
             +section-container("Contact Information", true)
