@@ -1,6 +1,12 @@
-mixin insights-metric(title, secondary, icon)
+mixin insights-metric(title, secondaryLabel, icon, percentageNumber, percentageColour)
   div.py-2
     header.flex.justify-between.items-center
-      h2.font-bold.text-lg= title
-      h3 secondary
+      div(class="flex")
+        img(src=icon)
+        div(class="pl-4")
+          +h3(title)
+          div.text-gray-600 #{secondaryLabel}:
+      div
+        span #{percentageNumber}
+        span #{percentageColour}
     block

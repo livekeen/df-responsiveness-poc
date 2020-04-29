@@ -45,12 +45,12 @@ block body
                   li Roberto Short
           +card-container("About", true)
             +section-container("Summary", false)
-              p Assist with the analysis
+              p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campai...
             +section-container("Work Assignments", true)
               div.mb-4
                 +h3("Marketing Specialist")
                 p North American Marketing
-                p 2/15/2018 &endash; Current ° 1 year 2 months
+                p 2/15/2018 – Current ° 1 year 2 months
               div.mb-4
                 +h4("Job Description", "text-gray-600")
                 ul
@@ -62,15 +62,18 @@ block body
         .career
           +card-container("Performance", true)
             +section-container("Timeline", false)
-              div.h-24.bg-gray-400 chart here
+              img(src="chart.svg" class="w-full")
             +section-container("Reviews", true)
-              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
+              +performance-metric('Annual Review 2019', false, 'Due Date', '11/2/2019', false, 'Manager Review')
             +section-container("Goals", true)
-              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
+              +performance-metric('Holiday Brand Strategy', true, 'Due Date', '11/30/2019', true, '23%')
+              +performance-metric('Winter Brand Strategy', false, 'Due Date', '12/25/2019', false, 'Not Started')
             +section-container("Competencies", true)
-              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
+              +performance-metric('Presentation Skills', true, 'Category', 'Core Values', false, '4.4')
+              +performance-metric('Communication Skills', true, 'Category', 'Technical', false, 'Not Rated')
             +section-container("Development Plans", true)
-              +performance-metric('Annual Review 2019', true, 'Due Date', '11/2/2019', false, 'Manager Review')
+              +performance-metric('Leadership Skills', true, 'Period', '11/30/2019 - 6/30/2020', true, '50%')
+              +performance-metric('Management Skills', true, 'Period', '2/2/2020 - 6/1/2020', false)
           +card-container("Career", true)
             +section-container("Job Preferences", false)
               div.mb-4
@@ -93,15 +96,16 @@ block body
         .insights
           +card-container("Insights", false)
             +section-container("Highlights", false)
-              +insights-metric('Strengths', 'Communication and Organization', 'icon here')
+              +insights-metric('Strengths', 'Communication and Organization', 'highlight-strength.svg')
               +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'icon here')
               +insights-metric('Highest Experience', 'Marketing Specialist • 1 year and 2 months', 'icon here')
             +section-container("Recent Activity", true)
-              div Fall Brand Strategy
-              div Last Promotion
-              div Highest Experience
+              +insights-metric('Fall Brand Strategy', 'Goal completed on 8/12/2019', 'icon here')
+              +insights-metric('Digital Analytics', 'Course Enrolled on 7/22/2019', 'icon here')
+              +insights-metric('Execute marketing program 2019', 'Goal completed on 8/12/2019', 'icon here')
+              +insights-metric('Integrated Branding', 'Course Enrolled on 7/22/2019', 'icon here')
             +section-container("Recommendations", true)
-              div Strengths
-              div Last Promotion
-              div Highest Experience
+              +insights-metric('Content Strategist', 'R&D Department', 'icon here', '87%', '')
+              +insights-metric('Digital Strategist', 'Marketing Department', 'icon here', '63%', '')
+              +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'icon here', '63%', '')
 
