@@ -6,12 +6,12 @@ block title
 block body
   +navigation('About')
 
-  section.col-span-7.py-4
+  main(class="module__content p-4")
     header
       h1.mb-4.text-2xl About
-      main.grid.grid-flow-col-dense.grid-cols-3.gap-4
-        div sdfsdf
+      section(class="sm:grid sm:gap-4 sm:grid-cols-2 xl:grid-cols-3")
+        article.col-span-2 sdfsdf
 
-  aside.col-span-3.py-4
-      div Links
-      div Documents
+        aside.col-span-1.bg-gray-400.py-4
+            div Links
+            div Documents
