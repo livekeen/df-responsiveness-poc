@@ -11881,6 +11881,26 @@ video {
   transition-delay:1000ms;
 }
 
+.module__wrapper{
+  grid-template-areas:"nav content";
+  grid-template-columns:0 1fr;
+  grid-template-rows:auto 1fr
+}
+
+@media (min-width:768px){
+  .module__wrapper{
+    grid-template-columns:250px 1fr
+  }
+}
+
+.module__nav{
+  grid-area:nav
+}
+
+.module__content{
+  grid-area:content
+}
+
 @media (min-width: 640px){
   .sm\:space-y-0 > :not(template) ~ :not(template){
     --space-y-reverse:0;
