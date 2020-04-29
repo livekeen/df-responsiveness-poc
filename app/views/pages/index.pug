@@ -6,7 +6,7 @@ block title
 block body
   +navigation('Overview')
 
-  section.col-span-10.py-4
+  section.col-span-10.p-4
     header
       h1.mb-4.text-2xl Overview
       main(class="md:grid md:gap-4 lg:grid-cols-2 xl:grid-cols-3")
@@ -97,7 +97,7 @@ block body
           +card-container("Insights", false)
             +section-container("Highlights", false)
               +insights-metric('Strengths', 'Communication and Organization', 'highlight-strength.svg')
-              +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'icon here')
+              +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'highlight-promotion.svg')
               +insights-metric('Highest Experience', 'Marketing Specialist • 1 year and 2 months', 'icon here')
             +section-container("Recent Activity", true)
               +insights-metric('Fall Brand Strategy', 'Goal completed on 8/12/2019', 'icon here')
@@ -105,7 +105,7 @@ block body
               +insights-metric('Execute marketing program 2019', 'Goal completed on 8/12/2019', 'icon here')
               +insights-metric('Integrated Branding', 'Course Enrolled on 7/22/2019', 'icon here')
             +section-container("Recommendations", true)
-              +insights-metric('Content Strategist', 'R&D Department', 'icon here', '87%', '')
-              +insights-metric('Digital Strategist', 'Marketing Department', 'icon here', '63%', '')
-              +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'icon here', '63%', '')
+              +insights-metric('Content Strategist', 'R&D Department', 'icon here', 87)
+              +insights-metric('Digital Strategist', 'Marketing Department', 'icon here', 63)
+              +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'icon here', 63)
 

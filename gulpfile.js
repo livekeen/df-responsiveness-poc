@@ -7,7 +7,7 @@ const
   browserSync   = require('browser-sync').create(),
   concat        = require('gulp-concat'),
   del           = require('del'),
-  githubPages   = require('gulp-gh-pages'),
+  ghpages       = require('gulp-gh-pages'),
   imagemin      = require('gulp-imagemin'),
   jshint        = require('gulp-jshint'),
   cleancss      = require('gulp-clean-css'),
@@ -118,7 +118,7 @@ function reload(done) {
 // Make sure to create a branch called 'gh-pages' before deploying
 function deployFiles() {
   return src(basePaths.dest + "**/*")
-    .pipe(githubPages())
+    .pipe(ghpages())
 }
 
 // Pages
