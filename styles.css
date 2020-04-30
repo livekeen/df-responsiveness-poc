@@ -11894,11 +11894,37 @@ video {
 }
 
 .module__nav{
-  grid-area:nav
+  grid-area:nav;
+  left:-250px;
+  position:relative;
+  width:250px
+}
+
+@media (min-width:1024px){
+  .module__nav{
+    left:0
+  }
+}
+
+.module__nav-toggle{
+  position:absolute;
+  right:-11px;
+  top:0
+}
+
+.module__nav-toggle--expand{
+  visibility:visible
+}
+
+@media (min-width:1024px){
+  .module__nav-toggle--expand{
+    visibility:hidden
+  }
 }
 
 .module__content{
-  grid-area:content
+  grid-area:content;
+  padding:20px 15px
 }
 
 @media (min-width: 640px){
