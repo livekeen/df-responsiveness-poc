@@ -58,8 +58,28 @@
 
   &__nav
     grid-area: nav
+    left: -250px
+    position: relative /* for expand/collapse toggle */
+    width: 250px
+
+    @media (min-width: 1024px)
+      left: 0
+
+    &-toggle
+      position: absolute
+      right: -11px
+      top: 0
+
+      &--expand
+        visibility: visible
+
+        @media (min-width: 1024px)
+          visibility: hidden
+
+
   &__content
     grid-area: content
+    padding: 20px 15px
 
 // ---------------------------------
 // :: Third-party
