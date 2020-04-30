@@ -16,7 +16,6 @@ const
   pug           = require('gulp-pug'),
   rename        = require('gulp-rename'),
   sass          = require('gulp-sass'),
-  sourcemaps    = require('gulp-sourcemaps'),
   // sugarss       = require('sugarss'),
   // stylus        = require('gulp-stylus'),
   // slim          = require('gulp-slim'),
@@ -131,11 +130,9 @@ function pages() {
 
 // Styles
 function styles() {
-  return src(paths.styles.src)
-    .pipe(sourcemaps.init())
+  return src(paths.styles.src, { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss(postCSSPlugins))
-    .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.styles.dest)) // exports *.css
     .pipe(browserSync.stream()) // injects css once done
     .pipe(rename({ suffix: '.min' }))
@@ -147,12 +144,10 @@ function styles() {
 
 // Scripts
 function scripts() {
-  return src(paths.scripts.src)
-    .pipe(sourcemaps.init())
+  return src(paths.scripts.src, { sourcemaps: true })
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('functions.js'))
-    .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.scripts.dest)) // exports functions.js
     .pipe(rename({ suffix: '.min' }))
     // .pipe(uglify())
