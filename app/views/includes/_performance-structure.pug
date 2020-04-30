@@ -9,8 +9,8 @@ mixin performance-metric(title, flag, secondaryLabel, secondaryDate, metric, val
         div
           span.text-gray-600 #{secondaryLabel}:
           span &nbsp;#{secondaryDate}
-      div
+      div.flex
         if metric
           img(src="chart-performance.svg")
-        span #{value}
+        span.ml-2 #{value}
     block
