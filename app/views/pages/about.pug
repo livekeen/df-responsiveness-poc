@@ -7,11 +7,21 @@ block body
   +navigation('About')
 
   main(class="module__content")
-    header
-      h1.mb-4.text-2xl About
-      section(class="sm:grid sm:gap-4 sm:grid-cols-2 xl:grid-cols-3")
-        article.col-span-2 sdfsdf
+    p toolbar goes here
 
-        aside.col-span-1.bg-gray-400.py-4
-            div Links
-            div Documents
+    section(class="sm:grid sm:gap-4 sm:grid-cols-2 xl:grid-cols-3")
+      div.col-span-2
+        +card-container("About")
+          +section-container("Summary", false)
+            p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campaigns. A proven record of strategy execution, process implementation and improvement. Previously achieved HubSpot Inbound and Content Marketing Certification.
+          +section-container("Work Assignments", false)
+
+      aside.col-span-1
+          +card-container("Links")
+            p content
+          +card-container("Documents")
+            p content
+          +card-container("Recommendations")
+            +insights-metric('Content Strategist', 'R&D Department', 'highlight-job.svg', 87)
+            +insights-metric('Digital Strategist', 'Marketing Department', 'highlight-job.svg', 63)
+            +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'highlight-course.svg', 63)

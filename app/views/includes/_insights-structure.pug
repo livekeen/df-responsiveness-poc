@@ -4,11 +4,11 @@ mixin insights-metric(title, secondaryLabel, icon, percentageNumber)
 
   div.py-2
     header.flex.justify-between.items-center
-      div(class="flex")
+      div(class="flex flex-1")
         img(src=icon)
         div(class="pl-4")
           +h3(title)
-          div #{secondaryLabel}:
+          div #{secondaryLabel}
       if percentageNumber
         div
           if percentageNumber > 75
