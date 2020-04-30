@@ -1,10 +1,11 @@
-//- #TODO: add conditional for "hasAttributes" so that does not output undefined when value not specified
-
 mixin h2(title, hasAttributes)
-  h2(class="font-bold text-lg " + hasAttributes)= title
+  -const addAttributes = hasAttributes?hasAttributes:""
+  h2(class="text-lg tracking-tight" + " " + addAttributes)= title
 
 mixin h3(title, hasAttributes)
-  h3(class="text-base mb-1 " + hasAttributes)= title
+  -const addAttributes = hasAttributes?hasAttributes:""
+  h3(class="text-base tracking-tight" + " " + addAttributes)= title
 
 mixin h4(title, hasAttributes)
-  h4(class=hasAttributes)= title
+  -const addAttributes = hasAttributes?hasAttributes:""
+  h4(class="tracking-tight" + " " + addAttributes)= title

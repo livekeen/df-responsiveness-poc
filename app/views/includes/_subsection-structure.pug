@@ -1,0 +1,10 @@
+mixin subsection-container(title, hasMore)
+  if title
+    div
+      header(class="mt-4 mb-2")
+        +h3(title)
+      div(class="mt-2")
+        block
+  else
+    div(class="mt-2")
+      block
