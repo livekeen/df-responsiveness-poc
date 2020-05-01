@@ -3,6 +3,6 @@ mixin card-container(title, hasSettings)
     header.flex.justify-between.items-center.mb-2
       +h2(title, "text-gray-600")
       if hasSettings
-        img(src="settings.svg" class="cursor-pointer")
+        img(src="settings.svg" class="cursor-pointer" alt="Settings for " + title)
     section.border.rounded.shadow.px-4.mb-4
       block
