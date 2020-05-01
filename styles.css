@@ -11906,10 +11906,17 @@ video {
   }
 }
 
+.module__nav-tree{
+  position:-webkit-sticky;
+  position:sticky;
+  top:0
+}
+
 .module__nav-toggle{
   position:absolute;
   right:-11px;
-  top:0
+  top:0;
+  z-index:1
 }
 
 .module__nav-toggle--expand{
@@ -11925,6 +11932,121 @@ video {
 .module__content{
   grid-area:content;
   padding:20px 15px
+}
+
+.toolbar{
+  border-top:1px solid #ddd;
+  box-sizing:border-box;
+  display:flex;
+  font-size:12px;
+  position:relative;
+  margin-left:-15px;
+  margin-top:-20px
+}
+
+.toolbar__group{
+  margin-left:1px;
+  padding:5px;
+  position:relative
+}
+
+.toolbar__group:first-child{
+  margin-left:-3px
+}
+
+.toolbar__group:after{
+  content:" ";
+  border-right:1px solid #ddd;
+  display:inline-block;
+  height:16px;
+  position:absolute;
+  left:-1px;
+  top:10px
+}
+
+.toolbar__group:first-child:after{
+  content:normal
+}
+
+.toolbar__group--overflow{
+  left:-5px;
+  margin-left:0;
+  position:relative
+}
+
+.toolbar__group--overflow:after{
+  content:normal
+}
+
+.toolbar__overflow{
+  background-color:#fff;
+  border:1px solid #ddd;
+  box-shadow:0 4px 8px #d9d9d9;
+  border-radius:2px;
+  display:flex;
+  right:5px;
+  position:absolute;
+  top:3px;
+  z-index:1
+}
+
+.toolbar__button{
+  background-color:#fff;
+  border:0;
+  color:#000;
+  display:flex;
+  margin-left:5px;
+  text-align:left;
+  padding:5px;
+  position:relative
+}
+
+.toolbar__button:first-child{
+  margin-left:0
+}
+
+.toolbar__button--disabled{
+  color:#b7b7b7;
+  cursor:not-allowed
+}
+
+.toolbar__icon{
+  display:inline-block;
+  height:14px;
+  text-align:right;
+  width:14px
+}
+
+.toolbar__icon:not(.toolbar__icon--no-label):not(.toolbar__icon--dropdown){
+  margin-right:5px
+}
+
+.toolbar__icon:before{
+  color:#1e52bf;
+  font-size:14px
+}
+
+.toolbar__icon--dropdown{
+  margin-left:7px;
+  margin-right:2px;
+  width:8px
+}
+
+.toolbar__label{
+  line-height:14px
+}
+
+.toolbar__tooltip{
+  background-color:#fff;
+  border:1px solid #eee;
+  border-radius:3px;
+  box-shadow:0 4px 8px rgba(0,0,0,.0784314);
+  display:inline-block;
+  left:8px;
+  padding:8px;
+  position:absolute;
+  top:36px;
+  width:300px
 }
 
 @media (min-width: 640px){
