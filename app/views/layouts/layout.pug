@@ -26,6 +26,8 @@ html(lang='en')
   body.text-sm
 
     include ../includes/_navigation.pug
+    include ../includes/_toolbar-structure.pug
+    include ../includes/_tabs-structure.pug
     include ../includes/_heading-structure.pug
     include ../includes/_card-structure.pug
     include ../includes/_section-structure.pug
@@ -38,14 +40,19 @@ html(lang='en')
       div.text-white.text-sm Profile &amp; Settings
       div Logout
     div.module
-      header.module__header.bg-blue-400.p-4
-        div.w-20.h-20.bg-white.inline-block.rounded-full
-        div.inline-block
-          h2 Aaron Glover
-          p Marketing Specialist
-          p North American Marketing
-          p +1(657)-123-4323
-          p aarong@asia.com
+      header.module__header.flex.bg-blue-400.p-4.justify-between
+        div
+          div.w-20.h-20.bg-white.inline-block.rounded-full
+          div.inline-block
+            h2 Aaron Glover
+            p Marketing Specialist
+            p North American Marketing
+            p +1(657)-123-4323
+            p aarong@asia.com
+        div
+          div 1 courses due
+          div 1 goals due
+          div 1 reviews due
 
       div.module__wrapper.grid.grid-cols-12
         block body

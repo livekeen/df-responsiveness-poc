@@ -1,0 +1,27 @@
+mixin toolbar-container(title, hasMore)
+  .toolbar(role='toolbar' aria-label='Text Formatting' aria-controls='demo-datatable')
+    div(class="toolbar__group flex")
+      button.toolbar__button.toolbar__button--disabled(aria-pressed='false' value='save' tabindex='0')
+        img.toolbar__icon(src="toolbar-save.svg" aria-hidden='true')
+        span.toolbar__label() Save
+      button.toolbar__button(aria-pressed='false' value='refresh' tabindex='-1')
+        img.toolbar__icon(src="toolbar-refresh.svg" aria-hidden='true')
+        span.toolbar__label() Refresh
+    div(class="toolbar__group flex" role='radiogroup' aria-label='Text Alignment')
+      button.toolbar__button.toolbar__button--disabled(role='radio' aria-checked='false' tabindex='-1')
+        img.toolbar__icon(src="toolbar-problems.svg" aria-hidden='true')
+        span.toolbar__label() Problems
+    div(class="toolbar__group hidden sm:flex")
+      button.toolbar__button(aria-pressed='false' value='favorites' tabindex='-1')
+        img.toolbar__icon(src="toolbar-add.svg" aria-hidden='true')
+        span.toolbar__label() Add Section
+        img.toolbar__icon.toolbar__icon--dropdown(src="toolbar-expand.svg" aria-hidden='true')
+      button.toolbar__button(aria-disabled='true' tabindex='-1')
+        img.toolbar__icon(src="toolbar-export.svg" aria-hidden='true')
+        span.toolbar__label() Upload Resume
+      button.toolbar__button(aria-disabled='true' tabindex='-1')
+        img.toolbar__icon(src="toolbar-import.svg" aria-hidden='true')
+        span.toolbar__label() Import from LinkedIn
+    div(class="toolbar__group toolbar__group--overflow flex sm:hidden")
+      button.toolbar__button.on-hover(aria-disabled='true' tabindex='-1')
+        img.toolbar__icon.toolbar__icon--no-label(src="toolbar-more.svg" aria-hidden='true')

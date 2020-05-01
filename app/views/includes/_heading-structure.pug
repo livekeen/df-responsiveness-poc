@@ -1,11 +1,15 @@
 mixin h2(title, hasAttributes)
   -const addAttributes = hasAttributes?hasAttributes:""
-  h2(class="text-lg tracking-tight" + " " + addAttributes)= title
+  h2(class="text-xl tracking-tight" + " " + addAttributes)= title
 
 mixin h3(title, hasAttributes)
   -const addAttributes = hasAttributes?hasAttributes:""
-  h3(class="text-base tracking-tight" + " " + addAttributes)= title
+  h3(class="text-lg tracking-tight" + " " + addAttributes)= title
 
 mixin h4(title, hasAttributes)
   -const addAttributes = hasAttributes?hasAttributes:""
-  h4(class="tracking-tight" + " " + addAttributes)= title
+  h4(class="text-base tracking-tight" + " " + addAttributes)= title
+
+mixin h5(title, hasAttributes)
+  -const addAttributes = hasAttributes?hasAttributes:""
+  h5(class="tracking-tight" + " " + addAttributes)= title
