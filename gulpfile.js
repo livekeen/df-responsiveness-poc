@@ -117,15 +117,15 @@ function reload(done) {
 // Make sure to create a branch called 'gh-pages' before deploying
 function deployFiles() {
   return src(basePaths.dest + "**/*")
-    .pipe(ghpages())
+    .pipe(ghpages());
 }
 
 // Pages
 function pages() {
   return src(paths.pages.src)
     .pipe(pug())
-    .pipe(dest(basePaths.dest)) // exports .html
-    .pipe(notify({ message: 'Pages task complete' }));
+    .pipe(dest(basePaths.dest)); // exports .html
+    // .pipe(notify({ message: 'Pages task complete' }));
 }
 
 // Styles
@@ -138,8 +138,8 @@ function styles() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(cleancss())
     .pipe(dest(paths.styles.dest)) // exports *.min.css
-    .pipe(browserSync.stream()) // injects css once done - if page is using the .min
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(browserSync.stream()); // injects css once done - if page is using the .min
+    // .pipe(notify({ message: 'Styles task complete' }));
 }
 
 // Scripts
@@ -152,16 +152,16 @@ function scripts() {
     .pipe(rename({ suffix: '.min' }))
     // .pipe(uglify())
     .pipe(dest(paths.scripts.dest)) // exports functions.min.js
-    .pipe(browserSync.stream())
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(browserSync.stream());
+    // .pipe(notify({ message: 'Scripts task complete' }));
 }
 
 // Images
 function images() {
   return src(paths.images.src)
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(dest(paths.images.dest))
-    .pipe(notify({ message: 'Images task complete' }));
+    .pipe(dest(paths.images.dest));
+    // .pipe(notify({ message: 'Images task complete' }));
 }
 
 // Fonts
@@ -171,7 +171,7 @@ function fonts() {
 }
 
 // Defining complex tasks
-const build = gulp.series(clean, parallel(styles, images, pages, scripts, fonts), cleanEmptyFolders);
+const build = gulp.series(clean, parallel(styles, images, pages, scripts, fonts), cleanEmptyFolders, success);
 const serve = gulp.series(build, watchFiles, connect);
 const deploy = gulp.series(build, deployFiles);
 
