@@ -6,12 +6,11 @@ $(document).ready(function()
 
     $('.content__item').hover(
       function(){ 
-        // $('.content .content__item:first-child .content__actions').removeClass("isActive"); // Hide all original action bars
-        $(this).addClass("isActive"); // Add an active class to the hovered area
+        // $(this).addClass("isActive"); // Add an active class to the hovered area
         $(this).children(".content__actions").addClass("isActive"); // Add an active class to the action bar
       },
       function() {
-        $(this).removeClass("isActive"); // Remove an active class to the hovered area
+        // $(this).removeClass("isActive"); // Remove an active class to the hovered area
         $(this).children(".content__actions").removeClass("isActive"); // Remove an active class to the action bar
         $('.content .content__item:first-child .content__actions').addClass("isActive"); // Quickfix to prevent all original action bars from hiding on hover
       }
