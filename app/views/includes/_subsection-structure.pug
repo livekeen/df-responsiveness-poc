@@ -1,10 +1,18 @@
-mixin subsection-container(title, hasMore)
+mixin subsection-container(title, hasMore, hasContentActions)
   if title
     div
       header(class="mt-6 mb-2")
         +h4(title)
-      div(class="mt-2")
+      div(class="mt-2 relative")
+        if hasContentActions
+          div.actions.absolute.right-0
+            p Edit
+            p Delete
         block
   else
-    div(class="mt-2")
+    div(class="mt-2 relative")
+      if hasContentActions
+        div.actions.absolute.right-0
+          p Edit
+          p Delete
       block

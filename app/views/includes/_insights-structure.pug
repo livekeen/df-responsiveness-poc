@@ -5,7 +5,7 @@ mixin insights-metric(title, secondaryLabel, icon, percentageNumber)
   div.py-2
     header.flex.justify-between.items-center
       div(class="flex flex-1")
-        img(src=icon)
+        img(src=icon aria-hidden='true')
         div(class="pl-4")
           +h4(title)
           div #{secondaryLabel}

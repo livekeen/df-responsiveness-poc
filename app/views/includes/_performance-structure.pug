@@ -11,6 +11,6 @@ mixin performance-metric(title, flag, secondaryLabel, secondaryDate, metric, val
           span &nbsp;#{secondaryDate}
       div.flex
         if metric
-          img(src="chart-performance.svg")
+          img(src="chart-performance.svg" aria-hidden='true')
         span.ml-2 #{value}
     block

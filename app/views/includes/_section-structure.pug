@@ -1,12 +1,8 @@
-mixin section-container(title, hasActions, hasContentActions)
+mixin section-container(title, hasActions)
   section.py-4
     header.flex.justify-between.items-center.mb-6.border-b.border-gray-300
       +h3(title, "font-bold")
       if hasActions
         a(class="text-blue-400 hover:underline" href="#") All (2)
-    .content.relative
-      if hasContentActions
-        div.actions.absolute.right-0
-          p Edit
-          p Delete
+    .content
       block
