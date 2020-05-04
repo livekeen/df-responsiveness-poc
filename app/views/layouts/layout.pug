@@ -35,15 +35,15 @@ html(lang='en')
     include ../includes/_performance-structure.pug
     include ../includes/_insights-structure.pug
 
-    div.masthead.bg-blue-600.p-2.flex.justify-between
+    div.masthead.p-2.flex.justify-between
       div Navigation
       div.text-white.text-sm Profile &amp; Settings
       div Logout
     div.module
-      header(class="module__header sm:flex bg-blue-400 p-4 justify-between")
-        div
-          div.w-24.h-24.bg-white.inline-block.rounded-full
-          div.inline-block.text-white.m-4.text-sm.leading-snug
+      header(class="module__header sm:flex justify-between space-y-4")
+        div.flex
+          img(src="avatar.png" class="w-24 h-24 p-1 bg-white inline-block rounded-full mr-4")
+          div.inline-block.text-white.text-sm.leading-snug
             h2.text-lg Aaron Glover
             p Marketing Specialist
             p North American Marketing
@@ -51,15 +51,15 @@ html(lang='en')
             p aarong@asia.com
         div.flex.space-x-6.items-center.text-center.text-xs.leading-snug.text-blue-600.uppercase
           div.w-20.bg-white.p-1.rounded
-            div.text-2xl 1
+            div.text-2xl.leading-tight 1
             div courses
             div.text-red-600 due
           div.w-20.bg-white.p-1.rounded
-            div.text-2xl 1
+            div.text-2xl.leading-tight 1
             div goals
             div.text-red-600 due
           div.w-20.bg-white.p-1.rounded
-            div.text-2xl 1
+            div.text-2xl.leading-tight 1
             div reviews
             div.text-red-600 due
 
