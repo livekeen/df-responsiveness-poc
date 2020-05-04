@@ -11881,6 +11881,22 @@ video {
   transition-delay:1000ms;
 }
 
+.masthead{
+  background-color:#1e52bf
+}
+
+.module__header{
+  background-color:#3982e8;
+  padding:20px 15px;
+  position:relative
+}
+
+.module__header-toggle{
+  position:absolute;
+  left:0;
+  top:20px
+}
+
 .module__wrapper{
   grid-template-areas:"nav content";
   grid-template-columns:0 1fr;
