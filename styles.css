@@ -11950,6 +11950,27 @@ video {
   padding:20px 30px
 }
 
+.content__item{
+  transition-delay:0s;
+  transition-duration:.25s;
+  transition-property:background-color
+}
+
+.content__item.isActive{
+  background-color:#ececec
+}
+
+.content__actions{
+  opacity:0;
+  transition-delay:0s;
+  transition-duration:.25s;
+  transition-property:opacity
+}
+
+.content__actions.isActive{
+  opacity:1
+}
+
 .toolbar{
   border-top:1px solid #ddd;
   box-sizing:border-box;
