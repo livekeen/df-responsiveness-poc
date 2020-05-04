@@ -12042,6 +12042,10 @@ video {
   margin-left:0
 }
 
+.toolbar__button:hover{
+  backrground-color:#ececec
+}
+
 .toolbar__button--disabled{
   color:#b7b7b7;
   cursor:not-allowed
