@@ -5,6 +5,7 @@ mixin section-container(title, hasActions, hasAdd)
       if hasActions
         a(class="text-blue-400 hover:underline" href="#") All (2)
       if hasAdd
-        a(class="text-blue-400 hover:underline" href="#") addbuttonhere
+        button
+          img(src="toolbar-add.svg" alt="Add" + " " + title)
     .content
       block

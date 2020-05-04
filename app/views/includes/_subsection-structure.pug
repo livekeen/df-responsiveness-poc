@@ -8,6 +8,8 @@ mixin subsection-content(title, hasContentActions)
   div(class="content__item mt-2 pr-12 relative")
     block
     if hasContentActions
-      div.content__actions.absolute.right-0.top-0
-        p Edit #{title}
-        p Delete #{title}
+      div.content__actions.absolute.right-0.top-0.space-x-2
+        button
+          img(src="toolbar-edit.svg" alt="Edit" + " " + title)
+        button
+          img(src="toolbar-delete.svg" alt="Delete" + " " + title)
