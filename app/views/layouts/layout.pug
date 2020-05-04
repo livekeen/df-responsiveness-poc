@@ -40,28 +40,40 @@ html(lang='en')
       div.text-white.text-sm Profile &amp; Settings
       div Logout
     div.module
-      header(class="module__header sm:flex justify-between space-y-4")
-        div.flex
-          img(src="avatar.png" class="w-24 h-24 p-1 bg-white inline-block rounded-full mr-4")
-          div.inline-block.text-white.text-sm.leading-snug
-            h2.text-lg Aaron Glover
+      header(class="module__header sm:flex justify-between")
+        button.module__header-toggle
+          img(src="header-collapse.svg" alt="Collapse header")
+        div(class="mb-2 sm:m-0 flex")
+          img(src="avatar.png" class="w-16 sm:w-24 h-16 sm:h-24 p-1 bg-white inline-block rounded-full mr-4")
+          div(class="inline-block text-white text-xs sm:text-sm leading-snug")
+            h2(class="text-base sm:text-lg") Aaron Glover
             p Marketing Specialist
             p North American Marketing
-            p +1(657)-123-4323
-            p aarong@asia.com
-        div.flex.space-x-6.items-center.text-center.text-xs.leading-snug.text-blue-600.uppercase
-          div.w-20.bg-white.p-1.rounded
-            div.text-2xl.leading-tight 1
-            div courses
-            div.text-red-600 due
-          div.w-20.bg-white.p-1.rounded
-            div.text-2xl.leading-tight 1
-            div goals
-            div.text-red-600 due
-          div.w-20.bg-white.p-1.rounded
-            div.text-2xl.leading-tight 1
-            div reviews
-            div.text-red-600 due
+            div.mt-1.mb-2
+              a(href="tel: +16571234323" class="inline-flex mr-4")
+                img(src="header-phone.svg" class="mr-2" alt="Aaron Glover's Phone Number")
+                span +1(657)-123-4323
+              a(href="mailto: aarong@asia.com" class="inline-flex mr-4")
+                img(src="header-email.svg" class="mr-2" alt="Aaron Glover's Email Address")
+                span aarong@asia.com
+            div.space-x-2.mt-1.mb-2
+              a(href="#")
+                img(src="header-linkedin.svg" class="inline-block" alt="Aaron Glover on LinkedIn")
+              a(href="#")
+                img(src="header-twitter.svg" class="inline-block" alt="Aaron Glover on Twitter")
+        div(class="flex space-x-4 sm:space-x-6 items-center text-center text-xs leading-snug text-blue-600 uppercase")
+          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
+            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
+            div(class="inline-block sm:block") courses
+            div(class="inline-block sm:block text-red-600") due
+          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
+            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
+            div(class="inline-block sm:block") goals
+            div(class="inline-block sm:block text-red-600") due
+          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
+            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
+            div(class="inline-block sm:block") reviews
+            div(class="inline-block sm:block text-red-600") due
 
       div.module__wrapper.grid.grid-cols-12
         block body
