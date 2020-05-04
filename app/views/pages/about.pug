@@ -14,10 +14,11 @@ block body
         +card-container("About")
           +tabs-container()
           +section-container("Summary", false, true)
-            p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campaigns. A proven record of strategy execution, process implementation and improvement. Previously achieved HubSpot Inbound and Content Marketing Certification.
-            a(href="#" class="text-blue-600") View All
+            +subsection-content("Summary", true)
+              p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campaigns. A proven record of strategy execution, process implementation and improvement. Previously achieved HubSpot Inbound and Content Marketing Certification.
+              a(href="#" class="text-blue-600") View All
           +section-container("Work Assignments", false, true)
-            div
+            +subsection-content("Marketing Specialist", true)
               header(class="mt-6 mb-2")
                 +h4("Marketing Specialist")
                 p North American Marketing
@@ -37,7 +38,7 @@ block body
               div.mt-2
                 +h5("Key Projects", "text-gray-600")
                 p Compensation Module Release - Introduced the product to the marketplace by executing the plan with three marketing strategies: a new industry blog, a YouTube video series, and a Twitter account.
-            div
+            +subsection-content("Marketing Associate", true)
               header(class="mt-6 mb-2")
                 +h4("Marketing Associate")
                 p North American Marketing
@@ -59,7 +60,7 @@ block body
                 +h5("Key Projects", "text-gray-600")
                 p Email blast for product launch
           +section-container("Employment History", false)
-            div
+            +subsection-content("Marketing Intern", true)
               header(class="mt-6 mb-2")
                 +h4("Marketing Intern")
                 p Hobs International, Toronto, ON, Canada
@@ -67,14 +68,15 @@ block body
                   span.text-gray-600 Department:&nbsp;
                   span Marketing
                 p 10/2/2016 &ndash; 8/2/2017&nbsp;&nbsp;&#8226;&nbsp;&nbsp;10 months
-              div.mt-2
-                +h5("Duties and Responsibilites", "text-gray-600")
-                ul.list-disc.list-inside
-                  li Managing daily administrative tasks to ensure the Marketing department runs smoothly
-                  li Conducting market research to identify new revenue opportunities
-                  li Gathering and analyzing consumer behavior data (e.g. web traffic and rankings)
+              div
+                div.mt-2
+                  +h5("Duties and Responsibilites", "text-gray-600")
+                  ul.list-disc.list-inside
+                    li Managing daily administrative tasks to ensure the Marketing department runs smoothly
+                    li Conducting market research to identify new revenue opportunities
+                    li Gathering and analyzing consumer behavior data (e.g. web traffic and rankings)
           +section-container("Education", false)
-            div
+            +subsection-content("Masters of Business Administration", true)
               header(class="mt-6 mb-2")
                 +h4("Masters of Business Administration")
                 p McGill University, Montreal, QC, Canada
@@ -88,7 +90,7 @@ block body
                   span.text-gray-600 GPA:&nbsp;
                   span 3.8
                 p 5/14/2015 &ndash; 6/1/2017&nbsp;&nbsp;&#8226;&nbsp;&nbsp;2 years
-            div
+            +subsection-content("Bachelors in Marketing", true)
               header(class="mt-6 mb-2")
                 +h4("Bachelors in Marketing")
                 p University of Ottawa, Ottawa, ON, Canada
@@ -100,13 +102,13 @@ block body
                   span 4.1
                 p 8/28/2011 &ndash; 4/1/2014&nbsp;&nbsp;&#8226;&nbsp;&nbsp;3 years
           +section-container("Languages", false)
-            div
+            +subsection-content("English", true)
               header(class="mt-6 mb-2")
                 +h4("English")
                 p
                   span.text-gray-600 Proficiency: &nbsp;
                   span Speak, Read, Write
-            div
+            +subsection-content("Spanish", true)
               header(class="mt-6 mb-2")
                 +h4("Spanish")
                 p
