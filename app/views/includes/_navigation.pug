@@ -43,15 +43,14 @@
   ]
 
 mixin navigation(currentPage)
-  //- span Insert invisible tab that hides on medium screen sizes and up
-  nav(class="module__nav h-full bg-gray-100 border-r sticky")
-    ul(class="module__nav-tree py-4")
+  nav(class="module-nav h-full sticky")
+    ul(class="module-nav__inner")
       each link in links
         if link.name === currentPage
           li
-            a(class='py-1 px-4 block bg-gray-200 text-black-600 font-bold' href=link.url)= link.name
+            a(class='module-nav__item' + " " + "isActive" href=link.url)= link.name
         else
           li
-            a(class='py-1 px-4 block hover:bg-gray-200 text-blue-600' href=link.url)= link.name
-    img(src="sidebar-collapse.svg" alt="" class="module__nav-toggle module__nav-toggle--collapse")
-    img(src="sidebar-expand.svg" alt="" class="module__nav-toggle module__nav-toggle--expand")
+            a(class='module-nav__item' href=link.url)= link.name
+    img(src="sidebar-collapse.svg" alt="" class="module-nav__toggle module-nav__toggle--collapse")
+    img(src="sidebar-expand.svg" alt="" class="module-nav__toggle module-nav__toggle--expand")

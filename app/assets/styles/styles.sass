@@ -82,34 +82,46 @@ button
     @media (min-width: 1024px)
       grid-template-columns: 250px 1fr
 
-  &__nav
-    grid-area: nav
-    left: -250px
-    position: relative /* for expand/collapse toggle */
-    width: 250px
-
-    @media (min-width: 1024px)
-      left: 0
-
-    &-tree
-      position: sticky
-      top: 0
-
-    &-toggle
-      position: absolute
-      right: -11px
-      top: 0
-      z-index: 1
-
-      &--expand
-        visibility: visible
-
-        @media (min-width: 1024px)
-          visibility: hidden
-
   &__content
     grid-area: content
     padding: 20px 30px // 20px 30px as opposed to 20px 30px because of sidebar
+
+.module-nav
+  background-color: #F8F8F8
+  border-right: 1px solid #BBBBBB
+  grid-area: nav
+  left: -250px
+  position: relative /* for expand/collapse toggle */
+  width: 250px
+
+  @media (min-width: 1024px)
+    left: 0
+
+  &__inner
+    position: sticky
+    top: 0
+
+  &__item
+    color: #1E52BF
+    border-bottom: 1px solid #DDDDDD
+    display: block
+    padding: 12px 10px
+
+    &.isActive
+      background-color: #E2EFFF
+      font-weight: bold
+
+  &__toggle
+    position: absolute
+    right: -11px
+    top: 0
+    z-index: 1
+
+    &--expand
+      visibility: visible
+
+      @media (min-width: 1024px)
+        visibility: hidden
 
 .header
   &__actions
