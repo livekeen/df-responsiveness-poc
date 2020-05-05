@@ -1,5 +1,15 @@
-// bug fixing: .css({'background-color': 'blue', 'opacity': '.5'})
-// Actions
+// ---------------------------------
+// :: Table of Contents
+// ---------------------------------
+
+// :: Actions
+// :: Toolbar Tabbing Functionality
+
+// #NOTE for bug fixing: .css({'background-color': 'blue', 'opacity': '.5'})
+
+// ---------------------------------
+// :: Actions
+// ---------------------------------
 
 $(document).ready(function()
   {
@@ -18,8 +28,9 @@ $(document).ready(function()
    )
  });
 
-
-// Toolbar Tabbing Functionality
+// ---------------------------------
+// :: Toolbar Tabbing Functionality
+// ---------------------------------
 
 FormatToolbar = function (domNode) {
   this.domNode = domNode;
