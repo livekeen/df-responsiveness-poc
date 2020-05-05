@@ -11881,8 +11881,24 @@ video {
   transition-delay:1000ms;
 }
 
+a:focus,button:focus,input:focus,input[type=submit]:focus{
+  outline:3px solid #43beef;
+  outline-offset:0
+}
+
+button{
+  transition-delay:0s;
+  transition-duration:.25s;
+  transition-property:background-color
+}
+
+button:focus,button:hover{
+  background-color:#ececec
+}
+
 .masthead{
-  background-color:#1e52bf
+  background-color:#1e52bf;
+  height:40px
 }
 
 .module__header{
@@ -11950,11 +11966,21 @@ video {
   padding:20px 30px
 }
 
-.content__actions{
-  opacity:0;
+.content__actions,.header__actions{
   transition-delay:0s;
   transition-duration:.25s;
   transition-property:opacity
+}
+
+.content__action,.header__action{
+  padding:5px
+}
+
+.content__actions{
+  position:absolute;
+  right:0;
+  top:0;
+  opacity:0
 }
 
 .content__actions.isActive{
@@ -12032,13 +12058,18 @@ video {
   margin-left:0
 }
 
-.toolbar__button:hover{
-  backrground-color:#ececec
-}
-
 .toolbar__button--disabled{
+  background-color:transparent;
   color:#b7b7b7;
   cursor:not-allowed
+}
+
+.toolbar__button--disabled:hover{
+  background-color:inherit
+}
+
+.toolbar__button--disabled:focus{
+  background-color:inherit
 }
 
 .toolbar__icon{
