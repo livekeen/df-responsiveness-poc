@@ -1,11 +1,13 @@
-mixin section-container(title, hasActions, hasAdd)
+mixin section-container(title, hasMore, hasAdd)
   section.py-4
-    header.flex.justify-between.items-center.mb-6.border-b.border-gray-300
+    header.section-header.relative.flex.justify-between.items-center.mb-6.border-b.border-gray-300
       +h3(title, "font-bold")
-      if hasActions
-        a(class="text-blue-400 hover:underline" href="#") All (2)
-      if hasAdd
-        button
-          img(src="toolbar-add.svg" alt="Add" + " " + title)
+      if hasMore || hasAdd
+        .header__actions
+          if hasMore
+            a(class="actions__item text-blue-400 hover:underline" href="#") All (2)
+          if hasAdd
+            button.header__action
+              img(src="toolbar-add.svg" alt="Add" + " " + title)
     .content
       block

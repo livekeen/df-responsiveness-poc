@@ -4,12 +4,12 @@ mixin subsection-header(title)
       +h4(title)
     block
 
-mixin subsection-content(title, hasContentActions)
+mixin subsection-content(title, hasActions)
   div(class="content__item mt-2 pr-12 relative")
     block
-    if hasContentActions
-      div.content__actions.absolute.right-0.top-0.space-x-2
-        button
+    if hasActions
+      div.content__actions
+        button.content__action
           img(src="toolbar-edit.svg" alt="Edit" + " " + title)
-        button
+        button.content__action
           img(src="toolbar-delete.svg" alt="Delete" + " " + title)

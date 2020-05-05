@@ -45,8 +45,22 @@
 // ---------------------------------
 
 @import "../../../node_modules/tailwindcss/utilities"
+
+input:focus, input[type=submit]:focus, a:focus, button:focus
+  outline: 3px solid #43BEEF
+  outline-offset: 0
+
+button
+  transition-delay: 0s
+  transition-duration: 0.25s
+  transition-property: background-color
+
+  &:hover, &:focus
+    background-color: #ECECEC
+
 .masthead
   background-color: #1E52BF
+  height: 40px
 
 .module
   &__header
@@ -97,15 +111,28 @@
     grid-area: content
     padding: 20px 30px // 20px 30px as opposed to 20px 30px because of sidebar
 
-.content
+.header
   &__actions
-    opacity: 0
     transition-delay: 0s
     transition-duration: 0.25s
     transition-property: opacity
 
+  &__action
+    padding: 5px
+
+.content
+  &__actions
+    @extend .header__actions
+    position: absolute
+    right: 0
+    top: 0
+    opacity: 0
+
     &.isActive
       opacity: 1
+
+  &__action
+    @extend .header__action
 
 // Toolbar
 
@@ -181,18 +208,19 @@ $divider-width          : 1px
         &:first-child
             margin-left: 0
 
-        &:hover
-          backrground-color: #ECECEC
-
-        &:focus
-            focus-style()
-
         &:active
             pressed-style()
 
         &--disabled
+          background-color: transparent
           color: #B7B7B7
           cursor: not-allowed
+
+          &:hover
+            background-color: inherit
+
+          &:focus
+            background-color: inherit
 
     &__icon
         display: inline-block

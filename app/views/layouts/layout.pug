@@ -35,10 +35,25 @@ html(lang='en')
     include ../includes/_performance-structure.pug
     include ../includes/_insights-structure.pug
 
-    div.masthead.p-2.flex.justify-between
-      div Navigation
+    div.masthead.flex.justify-between.items-center
+      div
+        button(class="sm:border-r sm:border-white py-2 px-4 sm:px-6 sm:mr-4")
+          img(src="masthead-nav.svg" alt="Expand Global Navigation")
+        button.mr-2
+          img(src="masthead-home.svg" alt="Home")
       div.text-white.text-sm Profile &amp; Settings
-      div Logout
+      div.flex.items-center
+        div(class="hidden sm:block")
+          button.ml-3
+            img(src="masthead-people.svg")
+          button.ml-3
+            img(src="masthead-search.svg")
+          button.ml-3
+            img(src="masthead-help.svg")
+          button.ml-3
+            img(src="masthead-inbox.svg")
+        button(class="sm:border-l sm:border-white pr-2 pl-4 ml-4")
+          img(src="masthead-account.svg")
     div.module
       header(class="module__header sm:flex justify-between")
         button.module__header-toggle

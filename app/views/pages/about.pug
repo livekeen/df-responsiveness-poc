@@ -10,7 +10,7 @@ block body
     +toolbar-container()
 
     section(class="sm:grid sm:gap-4 sm:grid-cols-2 xl:grid-cols-3")
-      div.col-span-2
+      div(class="col-span-2")
         +card-container("About")
           +tabs-container()
           +section-container("Summary", false, true)
@@ -122,7 +122,7 @@ block body
           +section-container("Military", false)
           +section-container("Security Credentials", false)
 
-      aside.col-span-1
+      aside(class="col-span-2 xl:col-span-1")
           +card-container("Links")
             section
               p Personal

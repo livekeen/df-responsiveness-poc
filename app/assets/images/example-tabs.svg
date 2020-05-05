@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="756.212" height="23.5" viewBox="0 0 756.212 23.5">
+  <g id="Section_Tabs" data-name="Section Tabs" transform="translate(0 0)">
+    <text id="EMPLOYMENT_HISTORY" data-name="EMPLOYMENT HISTORY" transform="translate(298.5 13)" fill="#696969" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">EMPLOYMENT HISTORY</tspan></text>
+    <text id="WORK_ASSIGNMENTS" data-name="WORK ASSIGNMENTS" transform="translate(129.5 13)" fill="#696969" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">WORK ASSIGNMENTS</tspan></text>
+    <text id="SUMMARY" transform="translate(38.5 13)" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">SUMMARY</tspan></text>
+    <text id="EDUCATION" transform="translate(481.797 13)" fill="#696969" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">EDUCATION</tspan></text>
+    <text id="REFERENCES" transform="translate(582.797 13)" fill="#696969" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">REFERENCES</tspan></text>
+    <text id="PUBL" transform="translate(698.797 13)" fill="#696969" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">PUBL</tspan></text>
+    <path id="Path_893" data-name="Path 893" d="M0,6H69.921" transform="translate(27 16)" fill="none" stroke="#1dafec" stroke-width="3"/>
+    <g id="Section_Tabs-2" data-name="Section Tabs" transform="translate(0)">
+      <line id="Line_118" data-name="Line 118" x2="92.5" transform="translate(28 22)" fill="none" stroke="#1dafec" stroke-width="3"/>
+      <path id="G03_global_circle_arrow_left" d="M12.4,3.4a9,9,0,1,1-9,9A9.016,9.016,0,0,1,12.4,3.4ZM7.692,11.858a.729.729,0,0,0,0,1.042l5.333,5.333a.729.729,0,0,0,1.042,0l1.208-1.208a.729.729,0,0,0,0-1.042L11.65,12.4l3.583-3.583a.729.729,0,0,0,0-1.042l-1.167-1.25a.729.729,0,0,0-1.042,0Z" transform="translate(-3.4 -3.4)" fill="#b7b7b7"/>
+      <path id="G03_global_circle_arrow_right" d="M12.4,21.4a9,9,0,1,1,9-9A9.016,9.016,0,0,1,12.4,21.4Zm4.708-8.458a.729.729,0,0,0,0-1.042L11.817,6.525a.729.729,0,0,0-1.042,0L9.567,7.733a.729.729,0,0,0,0,1.042l3.583,3.583L9.567,15.942a.729.729,0,0,0,0,1.042l1.208,1.208a.729.729,0,0,0,1.042,0Z" transform="translate(734.812 -3.4)" fill="#1dafec"/>
+    </g>
+  </g>
+</svg>
