@@ -6,7 +6,7 @@ mixin performance-metric(title, flag, secondaryLabel, secondaryDate, metric, val
     div(class="border-l-4 pl-4 " + flagColour)
       +h4(title)
       div
-        span.text-gray-600 #{secondaryLabel}:
+        span.text-secondary #{secondaryLabel}:
         span &nbsp;#{secondaryDate}
     div.flex
       if metric

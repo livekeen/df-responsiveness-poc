@@ -1,7 +1,7 @@
 mixin card-container(title, hasSettings, hasAdd)
   article.card
     header.flex.justify-between.items-center.mb-2
-      +h2(title, "text-gray-600")
+      +h2(title, "text-secondary")
       if hasSettings || hasAdd
         .card__actions
           if hasSettings

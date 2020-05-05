@@ -6,7 +6,7 @@ mixin section-container(title, hasMore, hasAdd)
         if hasMore || hasAdd
           .header__actions
             if hasMore
-              a(class="actions__item text-blue-600 hover:underline" href="#") All (2)
+              a(class="actions__item text-primary hover:underline" href="#") All (2)
             if hasAdd
               button.header__action
                 img(src="toolbar-add.svg" alt="Add" + " " + title)
