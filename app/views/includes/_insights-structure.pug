@@ -2,17 +2,16 @@ mixin insights-metric(title, secondaryLabel, icon, percentageNumber)
   -
     const flagColour = flag ? "border-blue-700" : "border-gray-400"
 
-  div.py-2
-    header.flex.justify-between.items-center
-      div(class="flex flex-1")
-        img(src=icon aria-hidden='true')
-        div(class="pl-4")
-          +h4(title)
-          div #{secondaryLabel}
-      if percentageNumber
-        div
-          if percentageNumber > 75
-            span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-green-500.text-green-500 #{percentageNumber}%
-          else if percentageNumber > 50
-            span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-orange-500.text-orange-500 #{percentageNumber}%
-    block
+  header.flex.justify-between.items-center
+    div(class="flex flex-1")
+      img(src=icon aria-hidden='true')
+      div(class="pl-4")
+        +h4(title)
+        div #{secondaryLabel}
+    if percentageNumber
+      div
+        if percentageNumber > 75
+          span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-green-500.text-green-500 #{percentageNumber}%
+        else if percentageNumber > 50
+          span.flex.items-center.justify-center.border-2.rounded-full.w-10.h-10.border-orange-500.text-orange-500 #{percentageNumber}%
+  block

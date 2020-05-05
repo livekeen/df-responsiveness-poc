@@ -1,15 +1,6 @@
-mixin subsection-header(title)
-  div.subsection
+mixin subsection-container(title)
+  if title
     header(class="subsection-header mt-6 mb-2")
       +h4(title)
+  .content
     block
-
-mixin subsection-content(title, hasActions)
-  div(class="content__item mt-2 pr-12 relative")
-    block
-    if hasActions
-      div.content__actions
-        button.content__action
-          img(src="toolbar-edit.svg" alt="Edit" + " " + title)
-        button.content__action
-          img(src="toolbar-delete.svg" alt="Delete" + " " + title)

@@ -1,8 +1,14 @@
-mixin card-container(title, hasSettings)
-  article
+mixin card-container(title, hasSettings, hasAdd)
+  article.card
     header.flex.justify-between.items-center.mb-2
       +h2(title, "text-gray-600")
-      if hasSettings
-        img(src="settings.svg" class="cursor-pointer" alt="Settings for " + title)
+      if hasSettings || hasAdd
+        .card__actions
+          if hasSettings
+            button
+              img(src="settings.svg" alt="Settings for " + title)
+          if hasAdd
+            button.header__action
+              img(src="toolbar-add.svg" alt="Add" + " " + title)
     section.border.rounded.shadow.px-4.mb-4
       block

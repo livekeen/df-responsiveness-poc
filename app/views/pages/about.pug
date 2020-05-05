@@ -13,12 +13,12 @@ block body
       div(class="col-span-2")
         +card-container("About")
           +tabs-container()
-          +section-container("Summary", false, true)
-            +subsection-content("Summary", true)
+          +section-container("Summary")
+            +content-container("Summary", true, true)
               p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campaigns. A proven record of strategy execution, process implementation and improvement. Previously achieved HubSpot Inbound and Content Marketing Certification.
               a(href="#" class="text-blue-600") View All
-          +section-container("Work Assignments", false, true)
-            +subsection-content("Marketing Specialist", true)
+          +section-container("Work Assignments")
+            +content-container("Marketing Specialist", true, false)
               header(class="mt-6 mb-2")
                 +h4("Marketing Specialist")
                 p North American Marketing
@@ -38,7 +38,7 @@ block body
               div.mt-2
                 +h5("Key Projects", "text-gray-600")
                 p Compensation Module Release - Introduced the product to the marketplace by executing the plan with three marketing strategies: a new industry blog, a YouTube video series, and a Twitter account.
-            +subsection-content("Marketing Associate", true)
+            +content-container("Marketing Associate", true, false)
               header(class="mt-6 mb-2")
                 +h4("Marketing Associate")
                 p North American Marketing
@@ -59,8 +59,8 @@ block body
               div.mt-2
                 +h5("Key Projects", "text-gray-600")
                 p Email blast for product launch
-          +section-container("Employment History", false)
-            +subsection-content("Marketing Intern", true)
+          +section-container("Employment History", false, true)
+            +content-container("Marketing Intern", true, true)
               header(class="mt-6 mb-2")
                 +h4("Marketing Intern")
                 p Hobs International, Toronto, ON, Canada
@@ -75,8 +75,8 @@ block body
                     li Managing daily administrative tasks to ensure the Marketing department runs smoothly
                     li Conducting market research to identify new revenue opportunities
                     li Gathering and analyzing consumer behavior data (e.g. web traffic and rankings)
-          +section-container("Education", false)
-            +subsection-content("Masters of Business Administration", true)
+          +section-container("Education", false, true)
+            +content-container("Masters of Business Administration", true, true)
               header(class="mt-6 mb-2")
                 +h4("Masters of Business Administration")
                 p McGill University, Montreal, QC, Canada
@@ -90,7 +90,7 @@ block body
                   span.text-gray-600 GPA:&nbsp;
                   span 3.8
                 p 5/14/2015 &ndash; 6/1/2017&nbsp;&nbsp;&#8226;&nbsp;&nbsp;2 years
-            +subsection-content("Bachelors in Marketing", true)
+            +content-container("Bachelors in Marketing", true, true)
               header(class="mt-6 mb-2")
                 +h4("Bachelors in Marketing")
                 p University of Ottawa, Ottawa, ON, Canada
@@ -101,46 +101,57 @@ block body
                   span.text-gray-600 GPA:&nbsp;
                   span 4.1
                 p 8/28/2011 &ndash; 4/1/2014&nbsp;&nbsp;&#8226;&nbsp;&nbsp;3 years
-          +section-container("Languages", false)
-            +subsection-content("English", true)
+          +section-container("Languages", false, true)
+            +content-container("English", true, true)
               header(class="mt-6 mb-2")
                 +h4("English")
                 p
                   span.text-gray-600 Proficiency: &nbsp;
                   span Speak, Read, Write
-            +subsection-content("Spanish", true)
+            +content-container("Spanish", true, true)
               header(class="mt-6 mb-2")
                 +h4("Spanish")
                 p
                   span.text-gray-600 Proficiency: &nbsp;
                   span Speak, Read, Write
-          +section-container("References", false)
-          +section-container("Publications", false)
-          +section-container("Patents", false)
-          +section-container("Affiliations", false)
-          +section-container("Speaking", false)
-          +section-container("Military", false)
-          +section-container("Security Credentials", false)
+          +section-container("References", false, true)
+          +section-container("Publications", false, true)
+          +section-container("Patents", false, true)
+          +section-container("Affiliations", false, true)
+          +section-container("Speaking", false, true)
+          +section-container("Military", false, true)
+          +section-container("Security Credentials", false, true)
 
       aside(class="col-span-2 xl:col-span-1")
-          +card-container("Links")
-            section
-              p Personal
-              a(href="#") www.aaronglover.net
-            section
-              p Portfolio
-              a(href="#") www.dribbble.com/aaron
-          +card-container("Documents")
-            section
-              p Resume_2019
-              p PDF
-              p Uploaded on 3/21/2018 by Aaron Glover
-            section
-              p Resume_2019
-              p PDF
-              p Uploaded on 3/21/2018 by Aaron Glover
+          +card-container("Links", false, true)
+            +section-container()
+              +content-container("Personal", true, true)
+                p Personal
+                a(href="#" class="text-blue-600") www.aaronglover.net
+              +content-container("Portfolio", true, true)
+                p Portfolio
+                a(href="#" class="text-blue-600") www.dribbble.com/aaron
+          +card-container("Documents", false, true)
+            +section-container()
+              +content-container("Resume_2019", true, true)
+                a(href="#" class="text-blue-600") Resume_2019
+                p PDF
+                p 
+                  span.text-gray-600 Uploaded on
+                  span &nbsp;3/21/2018&nbsp;
+                  span.text-gray-600 by Aaron Glover
+              +content-container("Fundamentals of Team Building", true, true)
+                a(href="#" class="text-blue-600") Fundamentals of Team Building
+                p DOC
+                p 
+                  span.text-gray-600 Uploaded on
+                  span &nbsp;3/21/2018&nbsp;
+                  span.text-gray-600 by Aaron Glover
           +card-container("Recommendations")
-            section
-              +insights-metric('Content Strategist', 'R&D Department', 'highlight-job.svg', 87)
-              +insights-metric('Digital Strategist', 'Marketing Department', 'highlight-job.svg', 63)
-              +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'highlight-course.svg', 63)
+            +section-container()
+              +content-container()
+                +insights-metric('Content Strategist', 'R&D Department', 'highlight-job.svg', 87)
+              +content-container()
+                +insights-metric('Digital Strategist', 'Marketing Department', 'highlight-job.svg', 63)
+              +content-container()
+                +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'highlight-course.svg', 63)

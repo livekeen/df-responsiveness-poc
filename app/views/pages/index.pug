@@ -13,37 +13,40 @@ block body
         .general
           +card-container("Personal Info", true)
             +section-container("Contact Information", true)
-              +subsection-header("Addresses")
-                +h5("Primary Residence", "text-gray-600")
-                ul
-                  li 123 Street
-                  li Coldwater, AK
-                  li 34567
-                  li United States of America
-              +subsection-header("Contact Information")
-                +h5("Phone Numbers", "text-gray-600")
-                ul
-                  li Home
-                  li Business
-              +subsection-header()
-                +h5("Email Addresses", "text-gray-600")
-                ul
-                  li Home
-                  li Business
+              +subsection-container("Addresses")
+                +content-container()
+                  +h5("Primary Residence", "text-gray-600")
+                  ul
+                    li 123 Street
+                    li Coldwater, AK
+                    li 34567
+                    li United States of America
+              +subsection-container("Contact Information")
+                +content-container()
+                  +h5("Phone Numbers", "text-gray-600")
+                  ul
+                    li Home
+                    li Business
+                +content-container()
+                  +h5("Email Addresses", "text-gray-600")
+                  ul
+                    li Home
+                    li Business
             +section-container("Personal Information")
-              +subsection-header()
+              +content-container()
                 +h5("Marital Status", "text-gray-600")
                 p Not specified
-              +subsection-header()
+              +content-container()
                 +h5("Dependents", "text-gray-600")
                 ul
                   li Maya Short
                   li Roberto Short
           +card-container("About", true)
             +section-container("Summary", false)
-              p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campai...
+              +content-container()
+                p Assist with the analyses of marketing data, including campaign results, conversion rates, and online traffic in order to improve future marketing strategies and campai...
             +section-container("Work Assignments", true)
-              div
+              +content-container()
                 header(class="mt-6 mb-2")
                   +h4("Marketing Specialist")
                   p North American Marketing
@@ -65,31 +68,38 @@ block body
         .career
           +card-container("Performance", true)
             +section-container("Timeline", false)
-              img(src="chart.svg" alt="" class="w-full")
+              +content-container()
+                img(src="chart.svg" alt="" class="w-full")
             +section-container("Reviews", true)
-              +performance-metric('Annual Review 2019', false, 'Due Date', '11/2/2019', false, 'Manager Review')
+              +content-container()
+                +performance-metric('Annual Review 2019', false, 'Due Date', '11/2/2019', false, 'Manager Review')
             +section-container("Goals", true)
-              +performance-metric('Holiday Brand Strategy', true, 'Due Date', '11/30/2019', true, '23%')
-              +performance-metric('Winter Brand Strategy', false, 'Due Date', '12/25/2019', false, 'Not Started')
+              +content-container()
+                +performance-metric('Holiday Brand Strategy', true, 'Due Date', '11/30/2019', true, '23%')
+              +content-container()
+                +performance-metric('Winter Brand Strategy', false, 'Due Date', '12/25/2019', false, 'Not Started')
             +section-container("Competencies", true)
-              +performance-metric('Presentation Skills', true, 'Category', 'Core Values', false, '4.4')
-              +performance-metric('Communication Skills', true, 'Category', 'Technical', false, 'Not Rated')
+              +content-container()
+                +performance-metric('Presentation Skills', true, 'Category', 'Core Values', false, '4.4')
+              +content-container()
+                +performance-metric('Communication Skills', true, 'Category', 'Technical', false, 'Not Rated')
             +section-container("Development Plans", true)
-              +performance-metric('Leadership Skills', true, 'Period', '11/30/2019 - 6/30/2020', true, '50%')
-              +performance-metric('Management Skills', true, 'Period', '2/2/2020 - 6/1/2020', false)
+              +content-container()
+                +performance-metric('Leadership Skills', true, 'Period', '11/30/2019 - 6/30/2020', true, '50%')
+              +content-container()
+                +performance-metric('Management Skills', true, 'Period', '2/2/2020 - 6/1/2020', false)
           +card-container("Career", true)
             +section-container("Job Preferences", false)
-              +subsection-header()
+              +content-container()
                 +h5("Interests", "text-gray-600")
                 p Strategy Development
-              +subsection-header()
+              +content-container()
                 +h5("Mobility", "text-gray-600")
                 p Strategy Development
-              +subsection-header()
+              +content-container()
                 +h5("Job Family", "text-gray-600")
                 p Marketing; Sales
-
-              +subsection-header()
+              +content-container()
                 +h5("Availability", "text-gray-600")
                 p Monday – Thursday
                 ul
@@ -101,15 +111,25 @@ block body
         .insights
           +card-container("Insights", false)
             +section-container("Highlights", false)
-              +insights-metric('Strengths', 'Communication and Organization', 'highlight-strength.svg')
-              +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'highlight-promotion.svg')
-              +insights-metric('Highest Experience', 'Marketing Specialist • 1 year and 2 months', 'highlight-experience.svg')
+              +content-container()
+                +insights-metric('Strengths', 'Communication and Organization', 'highlight-strength.svg')
+              +content-container()
+                +insights-metric('Last Promotion', 'Marketing Specialist on 7/15/2018', 'highlight-promotion.svg')
+              +content-container()
+                +insights-metric('Highest Experience', 'Marketing Specialist • 1 year and 2 months', 'highlight-experience.svg')
             +section-container("Recent Activity", true)
-              +insights-metric('Fall Brand Strategy', 'Goal completed on 8/12/2019', 'highlight-goal.svg')
-              +insights-metric('Digital Analytics', 'Course Enrolled on 7/22/2019', 'highlight-course.svg')
-              +insights-metric('Execute marketing program 2019', 'Goal completed on 8/12/2019', 'highlight-goal.svg')
-              +insights-metric('Integrated Branding', 'Course Enrolled on 7/22/2019', 'highlight-course.svg')
+              +content-container()
+                +insights-metric('Fall Brand Strategy', 'Goal completed on 8/12/2019', 'highlight-goal.svg')
+              +content-container()
+                +insights-metric('Digital Analytics', 'Course Enrolled on 7/22/2019', 'highlight-course.svg')
+              +content-container()
+                +insights-metric('Execute marketing program 2019', 'Goal completed on 8/12/2019', 'highlight-goal.svg')
+              +content-container()
+                +insights-metric('Integrated Branding', 'Course Enrolled on 7/22/2019', 'highlight-course.svg')
             +section-container("Recommendations", true)
-              +insights-metric('Content Strategist', 'R&D Department', 'highlight-job.svg', 87)
-              +insights-metric('Digital Strategist', 'Marketing Department', 'highlight-job.svg', 63)
-              +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'highlight-course.svg', 63)
+              +content-container()
+                +insights-metric('Content Strategist', 'R&D Department', 'highlight-job.svg', 87)
+              +content-container()
+                +insights-metric('Digital Strategist', 'Marketing Department', 'highlight-job.svg', 63)
+              +content-container()
+                +insights-metric('Marketing Math', 'Enrollment Starting on 11/23/2019', 'highlight-course.svg', 63)

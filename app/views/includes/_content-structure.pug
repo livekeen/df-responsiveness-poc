@@ -1,0 +1,14 @@
+mixin content-container(title, hasEdit, hasDelete)
+  -
+    const hasActions = (hasEdit || hasDelete) ? "pr-12 relative" : ""
+
+  div(class="content__item mt-2" + " " + hasActions)
+    block
+    if hasActions
+      div.content__actions
+        if hasEdit
+          button.content__action
+            img(src="toolbar-edit.svg" alt="Edit" + " " + title)
+        if hasDelete
+          button.content__action
+            img(src="toolbar-delete.svg" alt="Delete" + " " + title)
