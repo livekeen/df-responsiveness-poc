@@ -48,7 +48,7 @@ mixin navigation(currentPage)
       each link in links
         if link.name === currentPage
           li
-            a(class='module-nav__item' + " " + "isActive" href=link.url)= link.name
+            a(class='module-nav__item' + " " + "is-active" href=link.url)= link.name
         else
           li
             a(class='module-nav__item' href=link.url)= link.name

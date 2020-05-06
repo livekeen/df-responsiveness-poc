@@ -103,7 +103,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     display: block
     padding: 12px 10px
 
-    &.isActive
+    &.is-active
       background-color: #E2EFFF
       font-weight: bold
 
@@ -125,6 +125,10 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
   padding: 20px 15px
   position: relative // for collapse/expand chevron
 
+  &.is-collapsed
+    padding-top: 10px
+    padding-bottom: 10px
+
   &__toggle
     @extend %animate__easeOutBack
     position: absolute
@@ -132,7 +136,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     top: 20px
     transform: rotate(180deg)
 
-    &.isActive
+    &.is-collapsed
       transform: rotate(0deg)
 
   &__avatar
@@ -146,7 +150,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
       height: 6rem
       width: 6rem
 
-    &.isActive
+    &.is-collapsed
       height: 2.5rem
       width: 2.5rem
 
@@ -154,7 +158,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     height: auto
     opacity: 1
 
-    &.isActive
+    &.is-collapsed
       height: 0
       opacity: 0
 
@@ -165,7 +169,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     width: 4rem
 
     &:first-child
-      &.isActive
+      &.is-collapsed
         @media (min-width: 640px)
           font-size: 1rem
 
@@ -175,7 +179,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     @media (min-width: 640px)
       display: block
 
-    &.isActive
+    &.is-collapsed
       display: inline
 
 .header
@@ -196,7 +200,7 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     top: 0
     opacity: 0
 
-    &:focus-within, &.isActive
+    &:focus-within, &.is-active
       opacity: 1
 
   &__action

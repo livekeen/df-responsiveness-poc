@@ -18,19 +18,19 @@ $(document).ready(function()
 
     $('.profile-header__toggle').click(function() {
       if (simplifiedProfile) {
-        $(this).removeClass("isActive");
-        $('.profile-header__employee-details').removeClass("isActive");
-        $('.profile-header__avatar').removeClass("isActive");
+        $(this).removeClass("is-collapsed");
+        $('.profile-header__employee-details').removeClass("is-collapsed");
+        $('.profile-header__avatar').removeClass("is-collapsed");
         $('.profile-header__due').each(function() {
-          $(this).removeClass("isActive");
+          $(this).removeClass("is-collapsed");
         });
         simplifiedProfile = false;
       } else {
-        $(this).addClass("isActive");
-        $('.profile-header__employee-details').addClass("isActive");
-        $('.profile-header__avatar').addClass("isActive");
+        $(this).addClass("is-collapsed");
+        $('.profile-header__employee-details').addClass("is-collapsed");
+        $('.profile-header__avatar').addClass("is-collapsed");
         $('.profile-header__due').each(function() {
-          $(this).addClass("isActive");
+          $(this).addClass("is-collapsed");
         });
         simplifiedProfile = true;
       }
@@ -44,17 +44,17 @@ $(document).ready(function()
 
 $(document).ready(function()
   {
-    $('.content .content__item:first-child .content__actions').addClass("isActive"); // Adds action bar to all first nodes
+    $('.content .content__item:first-child .content__actions').addClass("is-active"); // Adds action bar to all first nodes
 
     $('.content__item').hover(
       function(){
-        // $(this).addClass("isActive"); // Add an active class to the hovered area
-        $(this).children(".content__actions").addClass("isActive"); // Add an active class to the action bar
+        // $(this).addClass("is-active"); // Add an active class to the hovered area
+        $(this).children(".content__actions").addClass("is-active"); // Add an active class to the action bar
       },
       function() {
-        // $(this).removeClass("isActive"); // Remove an active class to the hovered area
-        $(this).children(".content__actions").removeClass("isActive"); // Remove an active class to the action bar
-        $('.content .content__item:first-child .content__actions').addClass("isActive"); // Quickfix to prevent all original action bars from hiding on hover
+        // $(this).removeClass("is-active"); // Remove an active class to the hovered area
+        $(this).children(".content__actions").removeClass("is-active"); // Remove an active class to the action bar
+        $('.content .content__item:first-child .content__actions').addClass("is-active"); // Quickfix to prevent all original action bars from hiding on hover
       }
    )
  });
