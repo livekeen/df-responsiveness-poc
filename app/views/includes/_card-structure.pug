@@ -1,5 +1,5 @@
 mixin card-container(title, hasSettings, hasAdd)
-  article.card
+  article.card-container
     header.flex.justify-between.items-center.mb-2
       +h2(title, "text-secondary")
       if hasSettings || hasAdd
@@ -10,5 +10,5 @@ mixin card-container(title, hasSettings, hasAdd)
           if hasAdd
             button.header__action
               img(src="toolbar-add.svg" alt="Add" + " " + title)
-    section.border.rounded.shadow.px-4.mb-4
+    section.card.border.rounded.shadow.px-4.mb-4
       block

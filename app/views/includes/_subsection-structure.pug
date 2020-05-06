@@ -1,6 +1,74 @@
-mixin subsection-container(title)
+mixin subsection-container(title, moreHeader)
   if title
-    header(class="subsection-header mt-6 mb-2")
+    header(class="subsection__header")
       +h4(title)
-  .content
+      if !moreHeader
+      else if moreHeader = "work0"
+        p North American Marketing
+        p 2/15/2018 &ndash; Current&nbsp;&nbsp;&#8226;&nbsp;&nbsp;1 year 2 months
+      else if moreHeader = "work1"
+        p North American Marketing
+        p
+          span.text-secondary Department:&nbsp;
+          span Marketing
+          span &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+          span.text-secondary Supervisor:&nbsp;
+          span James Clove
+        p 2/15/2018 &ndash; Current&nbsp;&nbsp;&#8226;&nbsp;&nbsp;1 year 2 months
+      else if moreHeader = "work2"
+        p North American Marketing
+        p
+          span.text-secondary Department:&nbsp;
+          span Marketing
+          span &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+          span.text-secondary Supervisor:&nbsp;
+          span James Clove
+        p 10/2/2017 &ndash; 2/15/2018&nbsp;&nbsp;&#8226;&nbsp;&nbsp;1 year
+      else if moreHeader = "work2"
+        p Hobs International, Toronto, ON, Canada
+        p
+          span.text-secondary Department:&nbsp;
+          span Marketing
+        p 10/2/2016 &ndash; 8/2/2017&nbsp;&nbsp;&#8226;&nbsp;&nbsp;10 months
+      else if moreHeader = "employment"
+        +h5("Duties and Responsibilites", "text-secondary")
+        ul.list-disc.list-inside
+          li Managing daily administrative tasks to ensure the Marketing department runs smoothly
+          li Conducting market research to identify new revenue opportunities
+          li Gathering and analyzing consumer behavior data (e.g. web traffic and rankings)
+      else if moreHeader = "education1"
+        p McGill University, Montreal, QC, Canada
+        p
+          span.text-secondary Major:&nbsp;
+          span Marketing
+          span &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+          span.text-secondary Minor:&nbsp;
+          span History
+          span &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+          span.text-secondary GPA:&nbsp;
+          span 3.8
+        p 5/14/2015 &ndash; 6/1/2017&nbsp;&nbsp;&#8226;&nbsp;&nbsp;2 years
+      else if moreHeader = "education2"
+        p University of Ottawa, Ottawa, ON, Canada
+        p
+          span.text-secondary Major:&nbsp;
+          span Marketing
+          span &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+          span.text-secondary GPA:&nbsp;
+          span 4.1
+        p 8/28/2011 &ndash; 4/1/2014&nbsp;&nbsp;&#8226;&nbsp;&nbsp;3 years
+      else if moreHeader = "language1"
+        p
+          span.text-secondary Proficiency: &nbsp;
+          span Speak, Read, Write
+      else if moreHeader = "language2"
+        p
+          span.text-secondary Proficiency: &nbsp;
+          span Speak, Read, Write
+
+  .subcontent
+    block
+
+mixin subsection-content()
+  div(class="subcontent__item")
     block

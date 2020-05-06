@@ -193,6 +193,12 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
     padding: 5px
 
 .content
+  &__item
+    margin-top: 1.5rem
+
+    &:first-child
+      margin-top: 0
+
   &__actions
     @extend .header__actions
     position: absolute
@@ -205,6 +211,10 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
 
   &__action
     @extend .header__action
+
+.subcontent
+  &__item
+    margin-top: .5rem
 
 // Toolbar
 

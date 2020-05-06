@@ -2,7 +2,7 @@ mixin content-container(title, hasEdit, hasDelete)
   -
     const hasActions = (hasEdit || hasDelete) ? "pr-12 relative" : ""
 
-  div(class="content__item mt-2" + " " + hasActions)
+  div(class="content__item" + " " + hasActions)
     block
     if hasActions
       div.content__actions
