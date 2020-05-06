@@ -11977,6 +11977,14 @@ video {
   transition-delay:1000ms;
 }
 
+.profile-header{
+  transition:all .9s cubic-bezier(.36,0,.66,-.56)
+}
+
+.profile-header__avatar,.profile-header__toggle{
+  transition:all .6s cubic-bezier(.34,1.56,.64,1)
+}
+
 .content__action,.header__action,.toolbar__button{
   transition-delay:0s;
   transition-duration:.25s;
@@ -11995,18 +12003,6 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
 .masthead{
   background-color:#1e52bf;
   height:40px
-}
-
-.module__header{
-  background-color:#3982e8;
-  padding:20px 15px;
-  position:relative
-}
-
-.module__header-toggle{
-  position:absolute;
-  left:0;
-  top:20px
 }
 
 .module__wrapper{
@@ -12054,7 +12050,7 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
   padding:12px 10px
 }
 
-.module-nav__item.isActive{
+.module-nav__item.is-active{
   background-color:#e2efff;
   font-weight:700
 }
@@ -12076,6 +12072,86 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
   }
 }
 
+.profile-header{
+  background-color:#3982e8;
+  padding:20px 15px;
+  position:relative
+}
+
+.profile-header.is-collapsed{
+  padding-top:10px;
+  padding-bottom:10px
+}
+
+.profile-header__toggle{
+  position:absolute;
+  left:0;
+  top:20px;
+  transform:rotate(180deg)
+}
+
+.profile-header__toggle.is-collapsed{
+  transform:rotate(0deg)
+}
+
+.profile-header__avatar{
+  background-color:#fff;
+  height:2.5rem;
+  padding:.125rem;
+  width:2.5rem
+}
+
+@media (min-width:640px){
+  .profile-header__avatar{
+    height:6rem;
+    width:6rem
+  }
+}
+
+.profile-header__avatar.is-collapsed{
+  height:2.5rem;
+  width:2.5rem
+}
+
+.profile-header__employee-details{
+  height:auto;
+  opacity:1
+}
+
+.profile-header__employee-details.is-collapsed{
+  height:0;
+  opacity:0
+}
+
+.profile-header__due{
+  display:inline;
+  padding-left:.125rem;
+  padding-right:.125rem;
+  width:4rem
+}
+
+@media (min-width:640px){
+  .profile-header__due:first-child.is-collapsed{
+    font-size:1rem
+  }
+}
+
+@media (min-width:640px){
+  .profile-header__due:first-child{
+    font-size:1.25rem
+  }
+}
+
+@media (min-width:640px){
+  .profile-header__due{
+    display:block
+  }
+}
+
+.profile-header__due.is-collapsed{
+  display:inline
+}
+
 .content__actions,.header__actions{
   transition-delay:0s;
   transition-duration:.25s;
@@ -12093,7 +12169,7 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
   opacity:0
 }
 
-.content__actions.isActive,.content__actions:focus-within{
+.content__actions.is-active,.content__actions:focus-within{
   opacity:1
 }
 
