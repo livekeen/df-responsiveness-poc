@@ -56,40 +56,42 @@ html(lang='en')
         button(class="sm:border-l sm:border-white pr-2 pl-4 ml-4")
           img(src="masthead-account.svg")
     div.module
-      header(class="module__header sm:flex justify-between")
-        button.module__header-toggle
-          img(src="header-collapse.svg" alt="Collapse header")
-        div(class="mb-2 sm:m-0 flex")
-          img(src="avatar.png" class="w-16 sm:w-24 h-16 sm:h-24 p-1 bg-white inline-block rounded-full mr-4")
-          div(class="inline-block text-white text-xs sm:text-sm leading-snug")
-            h2(class="text-base sm:text-lg") Aaron Glover
-            p Marketing Specialist
-            p North American Marketing
-            div.mt-1.mb-2
-              a(href="tel: +16571234323" class="inline-flex mr-4 items-center hover:underline")
-                img(src="header-phone.svg" class="mr-2" alt="Aaron Glover's Phone Number")
-                span +1(657)-123-4323
-              a(href="mailto: aarong@asia.com" class="inline-flex mr-4 items-center hover:underline")
-                img(src="header-email.svg" class="mr-2" alt="Aaron Glover's Email Address")
-                span aarong@asia.com
-            div.space-x-2.mt-1.mb-2
-              a(href="#")
-                img(src="header-linkedin.svg" class="inline-block" alt="Aaron Glover on LinkedIn")
-              a(href="#")
-                img(src="header-twitter.svg" class="inline-block" alt="Aaron Glover on Twitter")
-        div(class="flex space-x-4 sm:space-x-6 items-center text-center text-xs leading-snug text-primary uppercase")
-          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
-            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
-            div(class="inline-block sm:block") courses
-            div(class="inline-block sm:block text-red-600") due
-          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
-            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
-            div(class="inline-block sm:block") goals
-            div(class="inline-block sm:block text-red-600") due
-          div(class="sm:w-20 bg-white px-2 py-2 sm:py-1 rounded space-x-1 sm:space-x-0")
-            div(class="sm:text-xl inline-block sm:block font-bold leading-tight") 1
-            div(class="inline-block sm:block") reviews
-            div(class="inline-block sm:block text-red-600") due
+      header(class="profile-header sm:flex justify-between")
+        button.profile-header__toggle
+          img(src="header-collapse.svg" alt="Collapse profile header")
+        div(class="profile-header__primary mb-2 sm:m-0 flex items-start sm:items-center")
+          img(src="avatar.png" class="profile-header__avatar inline-block rounded-full mr-4")
+          div(class="inline-block text-white text-xs sm:text-sm leading-tight")
+            div.profile-header__employee
+              h2(class="text-base sm:text-lg") Aaron Glover
+              p Marketing Specialist
+            div.profile-header__employee-details
+              p North American Marketing
+              div.mt-1.mb-2
+                a(href="tel: +16571234323" class="inline-flex mr-4 items-center hover:underline")
+                  img(src="header-phone.svg" class="mr-2" alt="Aaron Glover's Phone Number")
+                  span +1(657)-123-4323
+                a(href="mailto: aarong@asia.com" class="inline-flex mr-4 items-center hover:underline")
+                  img(src="header-email.svg" class="mr-2" alt="Aaron Glover's Email Address")
+                  span aarong@asia.com
+              div.space-x-2.mt-1.mb-2
+                a(href="#")
+                  img(src="header-linkedin.svg" class="inline-block" alt="Aaron Glover on LinkedIn")
+                a(href="#")
+                  img(src="header-twitter.svg" class="inline-block" alt="Aaron Glover on Twitter")
+        div(class="profile-header__secondary flex space-x-4 sm:space-x-6 items-center text-center text-xs leading-snug text-primary uppercase")
+          div(class="profile-header__secondary-item inline-block bg-white px-2 py-2 sm:py-1 rounded")
+            div(class="profile-header__due font-bold leading-tight") 1
+            div(class="profile-header__due") courses
+            div(class="profile-header__due text-red-600") due
+          div(class="profile-header__secondary-item inline-block bg-white px-2 py-2 sm:py-1 rounded")
+            div(class="profile-header__due font-bold leading-tight") 1
+            div(class="profile-header__due") goals
+            div(class="profile-header__due text-red-600") due
+          div(class="profile-header__secondary-item inline-block bg-white px-2 py-2 sm:py-1 rounded")
+            div(class="profile-header__due font-bold leading-tight") 1
+            div(class="profile-header__due") reviews
+            div(class="profile-header__due text-red-600") due
 
       div.module__wrapper.grid.grid-cols-12
         block body

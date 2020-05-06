@@ -2,10 +2,41 @@
 // :: Table of Contents
 // ---------------------------------
 
+// :: Profile Header
 // :: Actions
 // :: Toolbar Tabbing Functionality
 
 // #NOTE for bug fixing: .css({'background-color': 'blue', 'opacity': '.5'})
+
+// ---------------------------------
+// :: Profile Header
+// ---------------------------------
+
+$(document).ready(function()
+  {
+    var simplifiedProfile = false;
+
+    $('.profile-header__toggle').click(function() {
+      if (simplifiedProfile) {
+        $(this).removeClass("isActive");
+        $('.profile-header__employee-details').removeClass("isActive");
+        $('.profile-header__avatar').removeClass("isActive");
+        $('.profile-header__due').each(function() {
+          $(this).removeClass("isActive");
+        });
+        simplifiedProfile = false;
+      } else {
+        $(this).addClass("isActive");
+        $('.profile-header__employee-details').addClass("isActive");
+        $('.profile-header__avatar').addClass("isActive");
+        $('.profile-header__due').each(function() {
+          $(this).addClass("isActive");
+        });
+        simplifiedProfile = true;
+      }
+      // alert( "Handler for .click() called. expandedProfile set to " + expandedProfile );
+    });
+ });
 
 // ---------------------------------
 // :: Actions
@@ -16,7 +47,7 @@ $(document).ready(function()
     $('.content .content__item:first-child .content__actions').addClass("isActive"); // Adds action bar to all first nodes
 
     $('.content__item').hover(
-      function(){ 
+      function(){
         // $(this).addClass("isActive"); // Add an active class to the hovered area
         $(this).children(".content__actions").addClass("isActive"); // Add an active class to the action bar
       },

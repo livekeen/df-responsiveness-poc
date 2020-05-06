@@ -46,6 +46,12 @@
 
 @import "../../../node_modules/tailwindcss/utilities"
 
+%animate__easeInBack
+  transition: all 0.9s cubic-bezier(0.36, 0, 0.66, -0.56)
+
+%animate__easeOutBack
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)
+
 %toolbarbutton
   transition-delay: 0s
   transition-duration: 0.25s
@@ -63,16 +69,6 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
   height: 40px
 
 .module
-  &__header
-    background-color: #3982E8
-    padding: 20px 15px
-    position: relative // for collapse/expand chevron
-
-    &-toggle
-      position: absolute
-      left: 0
-      top: 20px
-
   &__wrapper
     grid-template-areas: "nav content"
 
@@ -122,6 +118,65 @@ input:focus, input[type=submit]:focus, a:focus, button:focus
 
       @media (min-width: 1024px)
         visibility: hidden
+
+.profile-header
+  @extend %animate__easeInBack
+  background-color: #3982E8
+  padding: 20px 15px
+  position: relative // for collapse/expand chevron
+
+  &__toggle
+    @extend %animate__easeOutBack
+    position: absolute
+    left: 0
+    top: 20px
+    transform: rotate(180deg)
+
+    &.isActive
+      transform: rotate(0deg)
+
+  &__avatar
+    @extend %animate__easeOutBack
+    background-color: white
+    height: 2.5rem
+    padding: .125rem
+    width: 2.5rem
+
+    @media (min-width: 640px)
+      height: 6rem
+      width: 6rem
+
+    &.isActive
+      height: 2.5rem
+      width: 2.5rem
+
+  &__employee-details
+    height: auto
+    opacity: 1
+
+    &.isActive
+      height: 0
+      opacity: 0
+
+  &__due
+    display: inline
+    padding-left: .125rem
+    padding-right: .125rem
+    width: 4rem
+
+    &:first-child
+      &.isActive
+        @media (min-width: 640px)
+          font-size: 1rem
+
+      @media (min-width: 640px)
+        font-size: 1.25rem
+
+    @media (min-width: 640px)
+      display: block
+
+    &.isActive
+      display: inline
 
 .header
   &__actions
