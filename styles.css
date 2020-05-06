@@ -12162,6 +12162,14 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
   padding:5px
 }
 
+.content__item{
+  margin-top:1.5rem
+}
+
+.content__item:first-child{
+  margin-top:0
+}
+
 .content__actions{
   position:absolute;
   right:0;
@@ -12171,6 +12179,10 @@ a:focus,button:focus,input:focus,input[type=submit]:focus{
 
 .content__actions.is-active,.content__actions:focus-within{
   opacity:1
+}
+
+.subcontent__item{
+  margin-top:.5rem
 }
 
 .toolbar{
