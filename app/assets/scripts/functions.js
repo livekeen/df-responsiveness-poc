@@ -56,7 +56,7 @@ $(document).ready(function()
         $(this).children(".content__actions").removeClass("is-active"); // Remove an active class to the action bar
         $('.content .content__item:first-child .content__actions').addClass("is-active"); // Quickfix to prevent all original action bars from hiding on hover
       }
-   )
+   );
  });
 
 // ---------------------------------
@@ -69,7 +69,7 @@ FormatToolbar = function (domNode) {
   this.lastItem = null;
 
   this.toolbarItems = [];
-  
+
   this.start = null;
   this.end = null;
   this.ourClipboard = '';
