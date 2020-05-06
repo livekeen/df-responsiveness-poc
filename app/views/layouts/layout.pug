@@ -46,21 +46,21 @@ html(lang='en')
       div.flex.items-center
         div(class="hidden sm:block")
           button.ml-3
-            img(src="masthead-people.svg")
+            img(src="masthead-people.svg" alt="People")
           button.ml-3
-            img(src="masthead-search.svg")
+            img(src="masthead-search.svg" alt="Search")
           button.ml-3
-            img(src="masthead-help.svg")
+            img(src="masthead-help.svg" alt="Help")
           button.ml-3
-            img(src="masthead-inbox.svg")
+            img(src="masthead-inbox.svg" alt="Message Center")
         button(class="sm:border-l sm:border-white pr-2 pl-4 ml-4")
-          img(src="masthead-account.svg")
+          img(src="masthead-account.svg" alt="Account")
     div.module
       header(class="profile-header sm:flex justify-between")
         button.profile-header__toggle
           img(src="header-collapse.svg" alt="Collapse profile header")
         div(class="profile-header__primary mb-2 sm:m-0 flex items-start sm:items-center")
-          img(src="avatar.png" class="profile-header__avatar inline-block rounded-full mr-4")
+          img(src="avatar.png" class="profile-header__avatar inline-block rounded-full mr-4" aria-hidden="true")
           div(class="inline-block text-white text-xs sm:text-sm leading-tight")
             div.profile-header__employee
               h2(class="text-base sm:text-lg") Aaron Glover
@@ -68,10 +68,10 @@ html(lang='en')
             div.profile-header__employee-details
               p North American Marketing
               div.mt-1.mb-2
-                a(href="tel: +16571234323" class="inline-flex mr-4 items-center hover:underline")
+                a(href="tel:+16571234323" class="inline-flex mr-4 items-center hover:underline")
                   img(src="header-phone.svg" class="mr-2" alt="Aaron Glover's Phone Number")
                   span +1(657)-123-4323
-                a(href="mailto: aarong@asia.com" class="inline-flex mr-4 items-center hover:underline")
+                a(href="mailto:aarong@asia.com" class="inline-flex mr-4 items-center hover:underline")
                   img(src="header-email.svg" class="mr-2" alt="Aaron Glover's Email Address")
                   span aarong@asia.com
               div.space-x-2.mt-1.mb-2
